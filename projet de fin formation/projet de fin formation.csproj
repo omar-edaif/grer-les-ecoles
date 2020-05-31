@@ -100,6 +100,18 @@
     <Compile Include="Forms\Add_secteur.Designer.cs">
       <DependentUpon>Add_secteur.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Form_Enseignant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_Enseignant.Designer.cs">
+      <DependentUpon>Form_Enseignant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_Exam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_Exam.Designer.cs">
+      <DependentUpon>Form_Exam.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Form_inscription.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +141,12 @@
     <EmbeddedResource Include="Forms\Add_secteur.resx">
       <DependentUpon>Add_secteur.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_Enseignant.resx">
+      <DependentUpon>Form_Enseignant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_Exam.resx">
+      <DependentUpon>Form_Exam.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_inscription.resx">
       <DependentUpon>Form_inscription.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,11 +172,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="MetroFramework.dll" />
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\327-portfolio.png" />
     <None Include="Resources\add-button-inside-black-circle %281%29.png" />
     <None Include="Resources\add-button-inside-black-circle.png" />
     <None Include="Resources\add.png" />
