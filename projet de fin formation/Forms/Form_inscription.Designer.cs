@@ -30,17 +30,8 @@
         {
             this.btnImage = new System.Windows.Forms.Button();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.imgStudent = new System.Windows.Forms.PictureBox();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.metroComboBox7 = new MetroFramework.Controls.MetroComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.metroComboBox6 = new MetroFramework.Controls.MetroComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.metroComboBox5 = new MetroFramework.Controls.MetroComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSupprimer = new System.Windows.Forms.Button();
             this.BtnModifier = new System.Windows.Forms.Button();
@@ -59,15 +50,24 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.imgStudent = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.metroComboBox5 = new MetroFramework.Controls.MetroComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.metroComboBox6 = new MetroFramework.Controls.MetroComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.metroComboBox7 = new MetroFramework.Controls.MetroComboBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
             this.metroPanel1.SuspendLayout();
-            this.metroPanel2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgStudent)).BeginInit();
+            this.metroPanel2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnImage
@@ -93,13 +93,25 @@
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(442, 77);
+            this.metroPanel1.Location = new System.Drawing.Point(457, 125);
             this.metroPanel1.Name = "metroPanel1";
             this.metroPanel1.Size = new System.Drawing.Size(372, 179);
             this.metroPanel1.TabIndex = 25;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // imgStudent
+            // 
+            this.imgStudent.BackgroundImage = global::projet_de_fin_formation.Properties.Resources._021_student_2;
+            this.imgStudent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.imgStudent.InitialImage = global::projet_de_fin_formation.Properties.Resources._021_student_2;
+            this.imgStudent.Location = new System.Drawing.Point(5, 6);
+            this.imgStudent.Name = "imgStudent";
+            this.imgStudent.Size = new System.Drawing.Size(186, 166);
+            this.imgStudent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgStudent.TabIndex = 23;
+            this.imgStudent.TabStop = false;
             // 
             // metroPanel2
             // 
@@ -109,137 +121,13 @@
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(0, 271);
+            this.metroPanel2.Location = new System.Drawing.Point(15, 319);
             this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(1253, 560);
+            this.metroPanel2.Size = new System.Drawing.Size(1259, 517);
             this.metroPanel2.TabIndex = 26;
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.Color.White;
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.metroComboBox5);
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.metroComboBox6);
-            this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.metroComboBox7);
-            this.groupBox3.Controls.Add(this.button4);
-            this.groupBox3.Controls.Add(this.button5);
-            this.groupBox3.Controls.Add(this.button6);
-            this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(650, 27);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(600, 485);
-            this.groupBox3.TabIndex = 25;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = " Info Stagaire :";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(72, 58);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(83, 21);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "Secteur :";
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.LimeGreen;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.Transparent;
-            this.button6.Location = new System.Drawing.Point(81, 391);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(106, 35);
-            this.button6.TabIndex = 30;
-            this.button6.Text = "Ajouter";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.LimeGreen;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Transparent;
-            this.button5.Location = new System.Drawing.Point(225, 391);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(106, 35);
-            this.button5.TabIndex = 29;
-            this.button5.Text = "Modifier";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.LimeGreen;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Transparent;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(373, 391);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(106, 35);
-            this.button4.TabIndex = 28;
-            this.button4.Text = "Supprimer";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // metroComboBox7
-            // 
-            this.metroComboBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroComboBox7.FormattingEnabled = true;
-            this.metroComboBox7.ItemHeight = 23;
-            this.metroComboBox7.Location = new System.Drawing.Point(158, 52);
-            this.metroComboBox7.Name = "metroComboBox7";
-            this.metroComboBox7.Size = new System.Drawing.Size(273, 29);
-            this.metroComboBox7.TabIndex = 31;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(85, 92);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 21);
-            this.label11.TabIndex = 32;
-            this.label11.Text = "filière :";
-            // 
-            // metroComboBox6
-            // 
-            this.metroComboBox6.FormattingEnabled = true;
-            this.metroComboBox6.ItemHeight = 23;
-            this.metroComboBox6.Location = new System.Drawing.Point(158, 86);
-            this.metroComboBox6.Name = "metroComboBox6";
-            this.metroComboBox6.Size = new System.Drawing.Size(273, 29);
-            this.metroComboBox6.TabIndex = 33;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(75, 125);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(81, 21);
-            this.label10.TabIndex = 32;
-            this.label10.Text = "groupe :";
-            // 
-            // metroComboBox5
-            // 
-            this.metroComboBox5.FormattingEnabled = true;
-            this.metroComboBox5.ItemHeight = 23;
-            this.metroComboBox5.Location = new System.Drawing.Point(158, 119);
-            this.metroComboBox5.Name = "metroComboBox5";
-            this.metroComboBox5.Size = new System.Drawing.Size(273, 29);
-            this.metroComboBox5.TabIndex = 33;
             // 
             // groupBox1
             // 
@@ -440,43 +328,28 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Code : ";
             // 
-            // button1
+            // groupBox3
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::projet_de_fin_formation.Properties.Resources.add_button_inside_black_circle__1_;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(437, 52);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(33, 25);
-            this.button1.TabIndex = 34;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // imgStudent
-            // 
-            this.imgStudent.BackgroundImage = global::projet_de_fin_formation.Properties.Resources._021_student_2;
-            this.imgStudent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.imgStudent.InitialImage = global::projet_de_fin_formation.Properties.Resources._021_student_2;
-            this.imgStudent.Location = new System.Drawing.Point(5, 6);
-            this.imgStudent.Name = "imgStudent";
-            this.imgStudent.Size = new System.Drawing.Size(186, 166);
-            this.imgStudent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgStudent.TabIndex = 23;
-            this.imgStudent.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::projet_de_fin_formation.Properties.Resources.add_button_inside_black_circle__1_;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(437, 86);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(33, 25);
-            this.button2.TabIndex = 34;
-            this.button2.UseVisualStyleBackColor = false;
+            this.groupBox3.BackColor = System.Drawing.Color.White;
+            this.groupBox3.Controls.Add(this.button3);
+            this.groupBox3.Controls.Add(this.button2);
+            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.metroComboBox5);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.metroComboBox6);
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.metroComboBox7);
+            this.groupBox3.Controls.Add(this.button4);
+            this.groupBox3.Controls.Add(this.button5);
+            this.groupBox3.Controls.Add(this.button6);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(650, 27);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(600, 485);
+            this.groupBox3.TabIndex = 25;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = " Info Stagaire :";
             // 
             // button3
             // 
@@ -491,11 +364,138 @@
             this.button3.TabIndex = 34;
             this.button3.UseVisualStyleBackColor = false;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImage = global::projet_de_fin_formation.Properties.Resources.add_button_inside_black_circle__1_;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(437, 86);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(33, 25);
+            this.button2.TabIndex = 34;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::projet_de_fin_formation.Properties.Resources.add_button_inside_black_circle__1_;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(437, 52);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(33, 25);
+            this.button1.TabIndex = 34;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // metroComboBox5
+            // 
+            this.metroComboBox5.FormattingEnabled = true;
+            this.metroComboBox5.ItemHeight = 23;
+            this.metroComboBox5.Location = new System.Drawing.Point(158, 119);
+            this.metroComboBox5.Name = "metroComboBox5";
+            this.metroComboBox5.Size = new System.Drawing.Size(273, 29);
+            this.metroComboBox5.TabIndex = 33;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(75, 125);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(81, 21);
+            this.label10.TabIndex = 32;
+            this.label10.Text = "groupe :";
+            // 
+            // metroComboBox6
+            // 
+            this.metroComboBox6.FormattingEnabled = true;
+            this.metroComboBox6.ItemHeight = 23;
+            this.metroComboBox6.Location = new System.Drawing.Point(158, 86);
+            this.metroComboBox6.Name = "metroComboBox6";
+            this.metroComboBox6.Size = new System.Drawing.Size(273, 29);
+            this.metroComboBox6.TabIndex = 33;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(85, 92);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(69, 21);
+            this.label11.TabIndex = 32;
+            this.label11.Text = "filière :";
+            // 
+            // metroComboBox7
+            // 
+            this.metroComboBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroComboBox7.FormattingEnabled = true;
+            this.metroComboBox7.ItemHeight = 23;
+            this.metroComboBox7.Location = new System.Drawing.Point(158, 52);
+            this.metroComboBox7.Name = "metroComboBox7";
+            this.metroComboBox7.Size = new System.Drawing.Size(273, 29);
+            this.metroComboBox7.TabIndex = 31;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.LimeGreen;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.Transparent;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(373, 391);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(106, 35);
+            this.button4.TabIndex = 28;
+            this.button4.Text = "Supprimer";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.LimeGreen;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.Transparent;
+            this.button5.Location = new System.Drawing.Point(225, 391);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(106, 35);
+            this.button5.TabIndex = 29;
+            this.button5.Text = "Modifier";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.LimeGreen;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.Transparent;
+            this.button6.Location = new System.Drawing.Point(81, 391);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(106, 35);
+            this.button6.TabIndex = 30;
+            this.button6.Text = "Ajouter";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(72, 58);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(83, 21);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Secteur :";
+            // 
             // Form_inscription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1263, 825);
+            this.ClientSize = new System.Drawing.Size(1293, 920);
             this.Controls.Add(this.metroPanel2);
             this.Controls.Add(this.metroPanel1);
             this.Name = "Form_inscription";
@@ -503,12 +503,12 @@
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.Load += new System.EventHandler(this.Form_inscription_Load);
             this.metroPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.imgStudent)).EndInit();
             this.metroPanel2.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgStudent)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }

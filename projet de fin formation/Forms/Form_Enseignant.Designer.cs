@@ -52,24 +52,22 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.btnImage = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.imgStudent = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.btnImage = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgStudent)).BeginInit();
             this.SuspendLayout();
             // 
@@ -169,7 +167,6 @@
             this.label4.Size = new System.Drawing.Size(60, 21);
             this.label4.TabIndex = 7;
             this.label4.Text = "Nom :";
-          
             // 
             // textBox3
             // 
@@ -334,6 +331,60 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = " Info Stagaire :";
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(77, 329);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(60, 21);
+            this.label13.TabIndex = 7;
+            this.label13.Text = "Nom :";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Location = new System.Drawing.Point(158, 361);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(294, 28);
+            this.textBox7.TabIndex = 4;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(158, 292);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(294, 28);
+            this.textBox6.TabIndex = 4;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(158, 326);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(294, 28);
+            this.textBox5.TabIndex = 4;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(56, 364);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(90, 21);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Prénom : ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(77, 295);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 21);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Code : ";
+            // 
             // metroPanel2
             // 
             this.metroPanel2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -342,7 +393,7 @@
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(74, 276);
+            this.metroPanel2.Location = new System.Drawing.Point(74, 307);
             this.metroPanel2.Name = "metroPanel2";
             this.metroPanel2.Size = new System.Drawing.Size(1253, 560);
             this.metroPanel2.TabIndex = 28;
@@ -372,37 +423,6 @@
             this.groupBox3.TabIndex = 25;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = " Info Stagaire :";
-            // 
-            // metroPanel1
-            // 
-            this.metroPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroPanel1.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
-            this.metroPanel1.Controls.Add(this.imgStudent);
-            this.metroPanel1.Controls.Add(this.btnImage);
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(516, 82);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(372, 179);
-            this.metroPanel1.TabIndex = 27;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
-            // 
-            // btnImage
-            // 
-            this.btnImage.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnImage.FlatAppearance.BorderSize = 0;
-            this.btnImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImage.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.btnImage.ForeColor = System.Drawing.Color.White;
-            this.btnImage.Location = new System.Drawing.Point(199, 136);
-            this.btnImage.Name = "btnImage";
-            this.btnImage.Size = new System.Drawing.Size(130, 37);
-            this.btnImage.TabIndex = 22;
-            this.btnImage.Text = "Choisir";
-            this.btnImage.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -447,77 +467,39 @@
             // 
             this.imgStudent.BackgroundImage = global::projet_de_fin_formation.Properties.Resources._327_portfolio;
             this.imgStudent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.imgStudent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.imgStudent.InitialImage = global::projet_de_fin_formation.Properties.Resources._021_student_2;
-            this.imgStudent.Location = new System.Drawing.Point(5, 7);
+            this.imgStudent.Location = new System.Drawing.Point(604, 63);
             this.imgStudent.Name = "imgStudent";
-            this.imgStudent.Size = new System.Drawing.Size(186, 166);
+            this.imgStudent.Size = new System.Drawing.Size(191, 179);
             this.imgStudent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgStudent.TabIndex = 23;
             this.imgStudent.TabStop = false;
             // 
-            // label3
+            // btnImage
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(77, 295);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 21);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Code : ";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(56, 364);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(90, 21);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "Prénom : ";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(158, 326);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(294, 28);
-            this.textBox5.TabIndex = 4;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(158, 292);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(294, 28);
-            this.textBox6.TabIndex = 4;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(158, 361);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(294, 28);
-            this.textBox7.TabIndex = 4;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(77, 329);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(60, 21);
-            this.label13.TabIndex = 7;
-            this.label13.Text = "Nom :";
+            this.btnImage.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnImage.FlatAppearance.BorderSize = 0;
+            this.btnImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImage.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnImage.ForeColor = System.Drawing.Color.White;
+            this.btnImage.Location = new System.Drawing.Point(632, 248);
+            this.btnImage.Name = "btnImage";
+            this.btnImage.Size = new System.Drawing.Size(130, 37);
+            this.btnImage.TabIndex = 22;
+            this.btnImage.Text = "Choisir";
+            this.btnImage.UseVisualStyleBackColor = false;
             // 
             // Form_Enseignant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1401, 859);
+            this.ClientSize = new System.Drawing.Size(1401, 920);
             this.Controls.Add(this.metroPanel2);
-            this.Controls.Add(this.metroPanel1);
+            this.Controls.Add(this.imgStudent);
+            this.Controls.Add(this.btnImage);
             this.Name = "Form_Enseignant";
-            this.Text = "Gestion des enseignent ";
+            this.Text = "Gestion des enseignents ";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.Load += new System.EventHandler(this.Form_Enseignant_Load);
             this.groupBox1.ResumeLayout(false);
@@ -525,7 +507,6 @@
             this.metroPanel2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.metroPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imgStudent)).EndInit();
             this.ResumeLayout(false);
 
@@ -563,7 +544,6 @@
         private MetroFramework.Controls.MetroPanel metroPanel2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.PictureBox imgStudent;
-        private MetroFramework.Controls.MetroPanel metroPanel1;
         private System.Windows.Forms.Button btnImage;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBox7;
