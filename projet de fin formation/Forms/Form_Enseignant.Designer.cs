@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.metroComboBox5 = new MetroFramework.Controls.MetroComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.metroComboBox6 = new MetroFramework.Controls.MetroComboBox();
@@ -65,6 +66,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.imgStudent = new System.Windows.Forms.PictureBox();
             this.btnImage = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -435,6 +437,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(33, 25);
             this.button3.TabIndex = 34;
+            this.toolTip1.SetToolTip(this.button3, "zzzzzzzzzzzzzzzzzzz");
             this.button3.UseVisualStyleBackColor = false;
             // 
             // button2
@@ -461,13 +464,13 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(33, 25);
             this.button1.TabIndex = 34;
+            this.button1.Tag = "";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // imgStudent
             // 
             this.imgStudent.BackgroundImage = global::projet_de_fin_formation.Properties.Resources._327_portfolio;
             this.imgStudent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.imgStudent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.imgStudent.InitialImage = global::projet_de_fin_formation.Properties.Resources._021_student_2;
             this.imgStudent.Location = new System.Drawing.Point(604, 63);
             this.imgStudent.Name = "imgStudent";
@@ -501,6 +504,7 @@
             this.Name = "Form_Enseignant";
             this.Text = "Gestion des enseignents ";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
+            this.toolTip1.SetToolTip(this, "zeeeeeeeeee");
             this.Load += new System.EventHandler(this.Form_Enseignant_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -551,5 +555,6 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

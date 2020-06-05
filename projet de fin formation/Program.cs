@@ -16,7 +16,7 @@ namespace projet_de_fin_formation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new projet_de_fin_formation.Forms.Form_Enseignant());
+            Application.Run(new projet_de_fin_formation.Forms.Add_secteur());
         }
     }
 }

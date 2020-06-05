@@ -46,6 +46,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -58,6 +59,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="APP_EcoleDataSet.cs">
+      <DependentUpon>APP_EcoleDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="APP_EcoleDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>APP_EcoleDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="APP_EcoleDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>APP_EcoleDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\ADO.cs" />
     <Compile Include="Forms\Add_Diplome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +175,31 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="APP_EcoleDataSet.xsc">
+      <DependentUpon>APP_EcoleDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="APP_EcoleDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>APP_EcoleDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="APP_EcoleDataSet.xss">
+      <DependentUpon>APP_EcoleDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="APP_EcoleDataSet1.xsc">
+      <DependentUpon>APP_EcoleDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="APP_EcoleDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>APP_EcoleDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="APP_EcoleDataSet1.xss">
+      <DependentUpon>APP_EcoleDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -179,6 +219,9 @@
     <None Include="Resources\add-button-inside-black-circle.png" />
     <None Include="Resources\add.png" />
     <None Include="Resources\021-student-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

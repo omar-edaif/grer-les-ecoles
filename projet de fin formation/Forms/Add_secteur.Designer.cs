@@ -28,29 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSupprimer = new System.Windows.Forms.Button();
             this.BtnModifier = new System.Windows.Forms.Button();
             this.btnAjouter = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.TxtCodeSecteur = new MetroFramework.Controls.MetroTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtcode = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.codesectDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.intitulésectDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateCréationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.secteurBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aPP_EcoleDataSet1 = new projet_de_fin_formation.APP_EcoleDataSet1();
+            this.secteurTableAdapter = new projet_de_fin_formation.APP_EcoleDataSet1TableAdapters.SecteurTableAdapter();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.secteurBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aPP_EcoleDataSet1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(469, 125);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(492, 311);
-            this.dataGridView1.TabIndex = 16;
             // 
             // panel1
             // 
@@ -58,7 +60,7 @@
             this.panel1.Controls.Add(this.btnSupprimer);
             this.panel1.Controls.Add(this.BtnModifier);
             this.panel1.Controls.Add(this.btnAjouter);
-            this.panel1.Location = new System.Drawing.Point(25, 308);
+            this.panel1.Location = new System.Drawing.Point(35, 308);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(396, 113);
             this.panel1.TabIndex = 14;
@@ -77,6 +79,7 @@
             this.btnSupprimer.TabIndex = 1;
             this.btnSupprimer.Text = "Supprimer";
             this.btnSupprimer.UseVisualStyleBackColor = false;
+            this.btnSupprimer.Click += new System.EventHandler(this.btnSupprimer_Click);
             // 
             // BtnModifier
             // 
@@ -91,6 +94,7 @@
             this.BtnModifier.TabIndex = 1;
             this.BtnModifier.Text = "Modifier";
             this.BtnModifier.UseVisualStyleBackColor = false;
+            this.BtnModifier.Click += new System.EventHandler(this.BtnModifier_Click);
             // 
             // btnAjouter
             // 
@@ -105,11 +109,12 @@
             this.btnAjouter.TabIndex = 1;
             this.btnAjouter.Text = "Ajouter";
             this.btnAjouter.UseVisualStyleBackColor = false;
+            this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtcode);
             this.groupBox1.Controls.Add(this.txtName);
+            this.groupBox1.Controls.Add(this.TxtCodeSecteur);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -119,6 +124,27 @@
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Secteur :";
+            // 
+            // txtName
+            // 
+            this.txtName.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(160, 92);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(238, 28);
+            this.txtName.TabIndex = 11;
+            // 
+            // TxtCodeSecteur
+            // 
+            this.TxtCodeSecteur.Enabled = false;
+            this.TxtCodeSecteur.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.TxtCodeSecteur.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.TxtCodeSecteur.Location = new System.Drawing.Point(160, 57);
+            this.TxtCodeSecteur.Multiline = true;
+            this.TxtCodeSecteur.Name = "TxtCodeSecteur";
+            this.TxtCodeSecteur.ReadOnly = true;
+            this.TxtCodeSecteur.Size = new System.Drawing.Size(238, 28);
+            this.TxtCodeSecteur.TabIndex = 10;
+            this.TxtCodeSecteur.Text = "1";
             // 
             // label4
             // 
@@ -140,21 +166,77 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Code Secteur:";
             // 
-            // txtcode
+            // dataGridView1
             // 
-            this.txtcode.Location = new System.Drawing.Point(157, 51);
-            this.txtcode.Name = "txtcode";
-            this.txtcode.ReadOnly = true;
-            this.txtcode.Size = new System.Drawing.Size(233, 32);
-            this.txtcode.TabIndex = 10;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeight = 36;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codesectDataGridViewTextBoxColumn,
+            this.intitulésectDataGridViewTextBoxColumn,
+            this.dateCréationDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.secteurBindingSource;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dataGridView1.Location = new System.Drawing.Point(531, 110);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(492, 311);
+            this.dataGridView1.TabIndex = 20;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // txtName
+            // codesectDataGridViewTextBoxColumn
             // 
-            this.txtName.Location = new System.Drawing.Point(157, 94);
-            this.txtName.Name = "txtName";
-            this.txtName.ReadOnly = true;
-            this.txtName.Size = new System.Drawing.Size(233, 32);
-            this.txtName.TabIndex = 9;
+            this.codesectDataGridViewTextBoxColumn.DataPropertyName = "code_sect";
+            this.codesectDataGridViewTextBoxColumn.HeaderText = "code secteur";
+            this.codesectDataGridViewTextBoxColumn.Name = "codesectDataGridViewTextBoxColumn";
+            this.codesectDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // intitulésectDataGridViewTextBoxColumn
+            // 
+            this.intitulésectDataGridViewTextBoxColumn.DataPropertyName = "intitulé_sect";
+            this.intitulésectDataGridViewTextBoxColumn.HeaderText = "intitulé secteur";
+            this.intitulésectDataGridViewTextBoxColumn.Name = "intitulésectDataGridViewTextBoxColumn";
+            this.intitulésectDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dateCréationDataGridViewTextBoxColumn
+            // 
+            this.dateCréationDataGridViewTextBoxColumn.DataPropertyName = "date_Création";
+            this.dateCréationDataGridViewTextBoxColumn.HeaderText = "date Création";
+            this.dateCréationDataGridViewTextBoxColumn.Name = "dateCréationDataGridViewTextBoxColumn";
+            this.dateCréationDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // secteurBindingSource
+            // 
+            this.secteurBindingSource.DataMember = "Secteur";
+            this.secteurBindingSource.DataSource = this.aPP_EcoleDataSet1;
+            // 
+            // aPP_EcoleDataSet1
+            // 
+            this.aPP_EcoleDataSet1.DataSetName = "APP_EcoleDataSet1";
+            this.aPP_EcoleDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // secteurTableAdapter
+            // 
+            this.secteurTableAdapter.ClearBeforeFill = true;
             // 
             // Add_secteur
             // 
@@ -169,17 +251,17 @@
             this.Text = "Gestion de secteur ";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.Load += new System.EventHandler(this.Add_secteur_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.secteurBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aPP_EcoleDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSupprimer;
         private System.Windows.Forms.Button BtnModifier;
@@ -187,7 +269,14 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtcode;
         private System.Windows.Forms.TextBox txtName;
+        private MetroFramework.Controls.MetroTextBox TxtCodeSecteur;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private APP_EcoleDataSet1 aPP_EcoleDataSet1;
+        private System.Windows.Forms.BindingSource secteurBindingSource;
+        private APP_EcoleDataSet1TableAdapters.SecteurTableAdapter secteurTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codesectDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn intitulésectDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateCréationDataGridViewTextBoxColumn;
     }
 }
