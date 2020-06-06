@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,14 @@ namespace projet_de_fin_formation.Forms
         public Add_Module()
         {
             InitializeComponent();
+        }
+
+        private void btnAjouter_Click(object sender, EventArgs e)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = $"insert into Module values('{TxtModule.Text}')";
+            ADO.Execute(cmd);
+          
         }
     }
 }

@@ -30,7 +30,7 @@
         {
             this.btnAjouter = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.TxtModule = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnAjouter
@@ -46,6 +46,7 @@
             this.btnAjouter.TabIndex = 1;
             this.btnAjouter.Text = "Ajouter";
             this.btnAjouter.UseVisualStyleBackColor = false;
+            this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
             // label4
             // 
@@ -57,20 +58,20 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Iintitué Niveau :";
             // 
-            // metroTextBox2
+            // TxtModule
             // 
-            this.metroTextBox2.Location = new System.Drawing.Point(181, 101);
-            this.metroTextBox2.Multiline = true;
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.Size = new System.Drawing.Size(253, 29);
-            this.metroTextBox2.TabIndex = 48;
+            this.TxtModule.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.TxtModule.Location = new System.Drawing.Point(192, 101);
+            this.TxtModule.Name = "TxtModule";
+            this.TxtModule.Size = new System.Drawing.Size(234, 28);
+            this.TxtModule.TabIndex = 8;
             // 
             // Add_Module
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 158);
-            this.Controls.Add(this.metroTextBox2);
+            this.Controls.Add(this.TxtModule);
             this.Controls.Add(this.btnAjouter);
             this.Controls.Add(this.label4);
             this.MaximumSize = new System.Drawing.Size(595, 158);
@@ -88,6 +89,6 @@
 
         private System.Windows.Forms.Button btnAjouter;
         private System.Windows.Forms.Label label4;
-        private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        private System.Windows.Forms.TextBox TxtModule;
     }
 }

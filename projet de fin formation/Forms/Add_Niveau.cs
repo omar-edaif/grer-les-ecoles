@@ -35,7 +35,7 @@ namespace projet_de_fin_formation
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = $"insert into niveau values('{txtName.Text.Trim()}','{DateTime.Now.ToShortDateString()}')";
-            ADO.Insert(cmd);
+            ADO.Execute(cmd);
             ChargerDGV();
         }
         //code modifier les niveaux
@@ -44,7 +44,7 @@ namespace projet_de_fin_formation
                 {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = $"update Niveau set intitué_niveau='{txtName.Text.Trim()}'where Code_niveau={TxtCodeNiveau.Text}";
-            ADO.Insert(cmd);
+            ADO.Execute(cmd);
             // Charger DataGridView 
             ChargerDGV();
 
@@ -53,7 +53,7 @@ namespace projet_de_fin_formation
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = $"Delete from Niveau where Code_niveau={TxtCodeNiveau.Text}";
-            ADO.Insert(cmd);
+            ADO.Execute(cmd);
 
             // Charger DataGridView 
             ChargerDGV();

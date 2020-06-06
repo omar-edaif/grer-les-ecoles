@@ -206,7 +206,7 @@
             // 
             // txtName
             // 
-            this.txtName.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.txtName.Location = new System.Drawing.Point(165, 92);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(251, 28);
@@ -224,7 +224,6 @@
             this.TxtCodeNiveau.ReadOnly = true;
             this.TxtCodeNiveau.Size = new System.Drawing.Size(251, 28);
             this.TxtCodeNiveau.TabIndex = 8;
-            this.TxtCodeNiveau.Text = "10";
             // 
             // label4
             // 

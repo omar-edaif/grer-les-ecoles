@@ -73,17 +73,18 @@
       <DependentUpon>APP_EcoleDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Classes\ADO.cs" />
+    <Compile Include="Classes\ChargerComboBox.cs" />
     <Compile Include="Forms\Add_Diplome.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Add_Diplome.Designer.cs">
       <DependentUpon>Add_Diplome.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Add_filiere.cs">
+    <Compile Include="Forms\Add_Filiere.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Add_filiere.Designer.cs">
-      <DependentUpon>Add_filiere.cs</DependentUpon>
+    <Compile Include="Forms\Add_Filiere.Designer.cs">
+      <DependentUpon>Add_Filiere.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Add_filiere_module.cs">
       <SubType>Form</SubType>
@@ -133,13 +134,21 @@
     <Compile Include="Forms\Form_inscription.Designer.cs">
       <DependentUpon>Form_inscription.cs</DependentUpon>
     </Compile>
+    <Compile Include="GetFiliere.cs">
+      <DependentUpon>GetFiliere.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GetFiliere.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GetFiliere.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Add_Diplome.resx">
       <DependentUpon>Add_Diplome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Add_filiere.resx">
-      <DependentUpon>Add_filiere.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Add_Filiere.resx">
+      <DependentUpon>Add_Filiere.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Add_filiere_module.resx">
       <DependentUpon>Add_filiere_module.cs</DependentUpon>
@@ -199,6 +208,17 @@
     </None>
     <None Include="APP_EcoleDataSet1.xss">
       <DependentUpon>APP_EcoleDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GetFiliere.xsc">
+      <DependentUpon>GetFiliere.xsd</DependentUpon>
+    </None>
+    <None Include="GetFiliere.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GetFiliere.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GetFiliere.xss">
+      <DependentUpon>GetFiliere.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

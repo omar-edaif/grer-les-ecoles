@@ -13,10 +13,10 @@ namespace projet_de_fin_formation
     {
         private static readonly string connectionString = ConfigurationManager.ConnectionStrings["PFF"].ConnectionString;
 
-        static public Exception exception;
+
        static public SqlConnection Cnx = new SqlConnection(connectionString);
-        static public SqlDataAdapter Adapter;
-        static public DataTable Table;
+       
+        DataSet dataset;
         public static void OpenOrCloseConnection()
         {
             if (Cnx.State == ConnectionState.Closed)
@@ -30,7 +30,7 @@ namespace projet_de_fin_formation
                 return;
             }
         }
-           public static void Insert(SqlCommand cmd)
+           public static void Execute(SqlCommand cmd)
           {
             try
             {
@@ -42,6 +42,7 @@ namespace projet_de_fin_formation
             }
             catch (Exception e)
             {
+                OpenOrCloseConnection();
                 MessageBox.Show(e.Message);
 
             }

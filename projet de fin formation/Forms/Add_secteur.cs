@@ -36,7 +36,7 @@ namespace projet_de_fin_formation.Forms
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = $"insert into secteur values('{txtName.Text.Trim()}','{DateTime.Now.ToShortDateString()}')";
-            ADO.Insert(cmd);
+            ADO.Execute(cmd);
             ChargerDataGridView();
         }
 
@@ -44,7 +44,7 @@ namespace projet_de_fin_formation.Forms
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = $"update Secteur set intitulé_sect ='{txtName.Text.Trim()}'where code_sect={TxtCodeSecteur.Text}";
-            ADO.Insert(cmd);
+            ADO.Execute(cmd);
             ChargerDataGridView();
         }
 
@@ -52,7 +52,7 @@ namespace projet_de_fin_formation.Forms
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = $"Delete from secteur where code_sect={TxtCodeSecteur.Text}";
-            ADO.Insert(cmd);
+            ADO.Execute(cmd);
             ChargerDataGridView();
         }
 

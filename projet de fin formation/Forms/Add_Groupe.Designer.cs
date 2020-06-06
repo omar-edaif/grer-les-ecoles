@@ -43,7 +43,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
             this.txtcode = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -125,7 +124,6 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtcode);
-            this.groupBox1.Controls.Add(this.txtName);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(68, 113);
             this.groupBox1.Name = "groupBox1";
@@ -224,14 +222,6 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Code Groupe :";
             // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(162, 86);
-            this.txtName.Name = "txtName";
-            this.txtName.ReadOnly = true;
-            this.txtName.Size = new System.Drawing.Size(249, 32);
-            this.txtName.TabIndex = 3;
-            // 
             // txtcode
             // 
             this.txtcode.Location = new System.Drawing.Point(162, 43);
@@ -279,6 +269,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtcode;
-        private System.Windows.Forms.TextBox txtName;
     }
 }
