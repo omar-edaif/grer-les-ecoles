@@ -79,11 +79,12 @@ namespace projet_de_fin_formation.Forms
         {
             try
             {
-                ComboNiveau.Text = ComboSecteur.Text = "";
+                //ComboNiveau.Text = ComboSecteur.Text = "";
                 DataGridViewRow row = dataGridView1.CurrentRow;
                 txtId.Text = row.Cells[0].Value.ToString();
                 txtName.Text = row.Cells[3].Value.ToString();
-                SqlDataAdapter adapter = new SqlDataAdapter($"select code_secteur,CodeNiveau from Filière where code_Fil={row.Cells[0].Value.ToString()}", ADO.Cnx);
+
+                SqlDataAdapter adapter = new SqlDataAdapter($"select code_secteur,CodeNiveau from Filière where code_Fil = {row.Cells[0].Value.ToString()}", ADO.Cnx);
                 Console.WriteLine(row.Cells[0].Value.ToString());
                 DataSet ds1 = new DataSet();
 
@@ -99,6 +100,11 @@ namespace projet_de_fin_formation.Forms
                 MessageBox.Show(ex.ToString());
             }
       
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
