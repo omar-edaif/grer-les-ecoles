@@ -76,6 +76,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAjouter);
             this.Name = "Add_AnneeScolaire";
+            this.ShadowType = MetroFramework.Forms.MetroForm.MetroFormShadowType.SystemShadow;
             this.Text = "Noveau Anne scolaire";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.Load += new System.EventHandler(this.Add_AnneeScolaire_Load);

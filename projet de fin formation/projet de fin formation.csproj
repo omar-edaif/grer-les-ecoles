@@ -88,6 +88,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GestionModule.xsd</DependentUpon>
     </Compile>
+    <Compile Include="GetGroupes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GetGroupes.xsd</DependentUpon>
+    </Compile>
     <Compile Include="GetModuleFiliere.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -259,6 +264,17 @@
     </None>
     <None Include="GestionModule.xss">
       <DependentUpon>GestionModule.xsd</DependentUpon>
+    </None>
+    <None Include="GetGroupes.xsc">
+      <DependentUpon>GetGroupes.xsd</DependentUpon>
+    </None>
+    <None Include="GetGroupes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GetGroupes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GetGroupes.xss">
+      <DependentUpon>GetGroupes.xsd</DependentUpon>
     </None>
     <None Include="GetModuleFiliere.xsc">
       <DependentUpon>GetModuleFiliere.xsd</DependentUpon>

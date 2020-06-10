@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GetGroupes" targetNamespace="http://tempuri.org/GetGroupes.xsd" xmlns:mstns="http://tempuri.org/GetGroupes.xsd" xmlns="http://tempuri.org/GetGroupes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="APP_EcoleConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="APP_EcoleConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.projet_de_fin_formation.Properties.Settings.GlobalReference.Default.APP_EcoleConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GetGroupesTableAdapter" GeneratorDataComponentClassName="GetGroupesTableAdapter" Name="GetGroupes" UserDataComponentName="GetGroupesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="APP_EcoleConnectionString (Settings)" DbObjectName="APP_Ecole.dbo.GetGroupes" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Code_groupe, Nom_Groupe, Année_scolaire, Année, CodeFil, nom_Fil, AnneeScolaire FROM dbo.GetGroupes</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Code_groupe" DataSetColumn="Code_groupe" />
+              <Mapping SourceColumn="Nom_Groupe" DataSetColumn="Nom_Groupe" />
+              <Mapping SourceColumn="Année_scolaire" DataSetColumn="Année_scolaire" />
+              <Mapping SourceColumn="Année" DataSetColumn="Année" />
+              <Mapping SourceColumn="CodeFil" DataSetColumn="CodeFil" />
+              <Mapping SourceColumn="nom_Fil" DataSetColumn="nom_Fil" />
+              <Mapping SourceColumn="AnneeScolaire" DataSetColumn="AnneeScolaire" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GetGroupes" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="GetGroupes" msprop:Generator_UserDSName="GetGroupes">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GetGroupes" msprop:Generator_TableClassName="GetGroupesDataTable" msprop:Generator_TableVarName="tableGetGroupes" msprop:Generator_TablePropName="_GetGroupes" msprop:Generator_RowDeletingName="GetGroupesRowDeleting" msprop:Generator_RowChangingName="GetGroupesRowChanging" msprop:Generator_RowEvHandlerName="GetGroupesRowChangeEventHandler" msprop:Generator_RowDeletedName="GetGroupesRowDeleted" msprop:Generator_UserTableName="GetGroupes" msprop:Generator_RowChangedName="GetGroupesRowChanged" msprop:Generator_RowEvArgName="GetGroupesRowChangeEvent" msprop:Generator_RowClassName="GetGroupesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Code_groupe" msprop:Generator_ColumnVarNameInTable="columnCode_groupe" msprop:Generator_ColumnPropNameInRow="Code_groupe" msprop:Generator_ColumnPropNameInTable="Code_groupeColumn" msprop:Generator_UserColumnName="Code_groupe" type="xs:int" />
+              <xs:element name="Nom_Groupe" msprop:Generator_ColumnVarNameInTable="columnNom_Groupe" msprop:Generator_ColumnPropNameInRow="Nom_Groupe" msprop:Generator_ColumnPropNameInTable="Nom_GroupeColumn" msprop:Generator_UserColumnName="Nom_Groupe" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Année_scolaire" msprop:Generator_ColumnVarNameInTable="columnAnnée_scolaire" msprop:Generator_ColumnPropNameInRow="Année_scolaire" msprop:Generator_ColumnPropNameInTable="Année_scolaireColumn" msprop:Generator_UserColumnName="Année_scolaire" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Année" msprop:Generator_ColumnVarNameInTable="columnAnnée" msprop:Generator_ColumnPropNameInRow="Année" msprop:Generator_ColumnPropNameInTable="AnnéeColumn" msprop:Generator_UserColumnName="Année" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodeFil" msprop:Generator_ColumnVarNameInTable="columnCodeFil" msprop:Generator_ColumnPropNameInRow="CodeFil" msprop:Generator_ColumnPropNameInTable="CodeFilColumn" msprop:Generator_UserColumnName="CodeFil" type="xs:int" minOccurs="0" />
+              <xs:element name="nom_Fil" msprop:Generator_ColumnVarNameInTable="columnnom_Fil" msprop:Generator_ColumnPropNameInRow="nom_Fil" msprop:Generator_ColumnPropNameInTable="nom_FilColumn" msprop:Generator_UserColumnName="nom_Fil" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AnneeScolaire" msprop:Generator_ColumnVarNameInTable="columnAnneeScolaire" msprop:Generator_ColumnPropNameInRow="AnneeScolaire" msprop:Generator_ColumnPropNameInTable="AnneeScolaireColumn" msprop:Generator_UserColumnName="AnneeScolaire" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GetGroupes" />
+      <xs:field xpath="mstns:Code_groupe" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
