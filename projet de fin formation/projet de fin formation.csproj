@@ -72,6 +72,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>APP_EcoleDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="APP_EcoleDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>APP_EcoleDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="APP_EcoleDataSet31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>APP_EcoleDataSet31.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Classes\ADO.cs" />
     <Compile Include="Classes\ChargerComboBox.cs" />
     <Compile Include="Forms\Add_Diplome.cs">
@@ -133,6 +143,11 @@
     </Compile>
     <Compile Include="Forms\Form_inscription.Designer.cs">
       <DependentUpon>Form_inscription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetDiplome.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GetDiplome.xsd</DependentUpon>
     </Compile>
     <Compile Include="GetFiliere.cs">
       <DependentUpon>GetFiliere.xsd</DependentUpon>
@@ -208,6 +223,39 @@
     </None>
     <None Include="APP_EcoleDataSet1.xss">
       <DependentUpon>APP_EcoleDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="APP_EcoleDataSet2.xsc">
+      <DependentUpon>APP_EcoleDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="APP_EcoleDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>APP_EcoleDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="APP_EcoleDataSet2.xss">
+      <DependentUpon>APP_EcoleDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="APP_EcoleDataSet31.xsc">
+      <DependentUpon>APP_EcoleDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="APP_EcoleDataSet31.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>APP_EcoleDataSet31.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="APP_EcoleDataSet31.xss">
+      <DependentUpon>APP_EcoleDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="GetDiplome.xsc">
+      <DependentUpon>GetDiplome.xsd</DependentUpon>
+    </None>
+    <None Include="GetDiplome.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GetDiplome.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GetDiplome.xss">
+      <DependentUpon>GetDiplome.xsd</DependentUpon>
     </None>
     <None Include="GetFiliere.xsc">
       <DependentUpon>GetFiliere.xsd</DependentUpon>

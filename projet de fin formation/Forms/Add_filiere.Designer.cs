@@ -127,7 +127,7 @@
             this.groupBox1.Controls.Add(this.txtId);
             this.groupBox1.Controls.Add(this.ComboNiveau);
             this.groupBox1.Controls.Add(this.ComboSecteur);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.groupBox1.Location = new System.Drawing.Point(23, 73);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(432, 286);
@@ -137,10 +137,10 @@
             // 
             // txtName
             // 
-            this.txtName.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.txtName.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.txtName.Location = new System.Drawing.Point(136, 86);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(242, 32);
+            this.txtName.Size = new System.Drawing.Size(242, 28);
             this.txtName.TabIndex = 2;
             // 
             // label5
@@ -186,27 +186,30 @@
             // txtId
             // 
             this.txtId.Enabled = false;
+            this.txtId.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.txtId.Location = new System.Drawing.Point(136, 43);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(242, 32);
+            this.txtId.Size = new System.Drawing.Size(242, 28);
             this.txtId.TabIndex = 1;
             // 
             // ComboNiveau
             // 
+            this.ComboNiveau.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.ComboNiveau.FormattingEnabled = true;
             this.ComboNiveau.Location = new System.Drawing.Point(136, 173);
             this.ComboNiveau.Name = "ComboNiveau";
-            this.ComboNiveau.Size = new System.Drawing.Size(242, 34);
+            this.ComboNiveau.Size = new System.Drawing.Size(242, 29);
             this.ComboNiveau.TabIndex = 4;
             this.ComboNiveau.Enter += new System.EventHandler(this.ComboNiveau_Enter);
             // 
             // ComboSecteur
             // 
+            this.ComboSecteur.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.ComboSecteur.FormattingEnabled = true;
             this.ComboSecteur.Location = new System.Drawing.Point(136, 129);
             this.ComboSecteur.Name = "ComboSecteur";
-            this.ComboSecteur.Size = new System.Drawing.Size(242, 34);
+            this.ComboSecteur.Size = new System.Drawing.Size(242, 29);
             this.ComboSecteur.TabIndex = 3;
             this.ComboSecteur.Enter += new System.EventHandler(this.ComboSecteur_Enter);
             // 

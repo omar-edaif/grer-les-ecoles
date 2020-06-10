@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="APP_EcoleDataSet3" targetNamespace="http://tempuri.org/APP_EcoleDataSet31.xsd" xmlns:mstns="http://tempuri.org/APP_EcoleDataSet31.xsd" xmlns="http://tempuri.org/APP_EcoleDataSet31.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="APP_EcoleConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="APP_EcoleConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.projet_de_fin_formation.Properties.Settings.GlobalReference.Default.APP_EcoleConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GetModuleFiliereTableAdapter" GeneratorDataComponentClassName="GetModuleFiliereTableAdapter" Name="GetModuleFiliere" UserDataComponentName="GetModuleFiliereTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="APP_EcoleConnectionString (Settings)" DbObjectName="APP_Ecole.dbo.GetModuleFiliere" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT nom_Fil, Intitulé_mod, masseHoraire, Coefficient FROM dbo.GetModuleFiliere</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nom_Fil" DataSetColumn="nom_Fil" />
+              <Mapping SourceColumn="Intitulé_mod" DataSetColumn="Intitulé_mod" />
+              <Mapping SourceColumn="masseHoraire" DataSetColumn="masseHoraire" />
+              <Mapping SourceColumn="Coefficient" DataSetColumn="Coefficient" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="APP_EcoleDataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="APP_EcoleDataSet3" msprop:Generator_UserDSName="APP_EcoleDataSet3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GetModuleFiliere" msprop:Generator_TableClassName="GetModuleFiliereDataTable" msprop:Generator_TableVarName="tableGetModuleFiliere" msprop:Generator_TablePropName="GetModuleFiliere" msprop:Generator_RowDeletingName="GetModuleFiliereRowDeleting" msprop:Generator_RowChangingName="GetModuleFiliereRowChanging" msprop:Generator_RowEvHandlerName="GetModuleFiliereRowChangeEventHandler" msprop:Generator_RowDeletedName="GetModuleFiliereRowDeleted" msprop:Generator_UserTableName="GetModuleFiliere" msprop:Generator_RowChangedName="GetModuleFiliereRowChanged" msprop:Generator_RowEvArgName="GetModuleFiliereRowChangeEvent" msprop:Generator_RowClassName="GetModuleFiliereRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nom_Fil" msprop:Generator_ColumnVarNameInTable="columnnom_Fil" msprop:Generator_ColumnPropNameInRow="nom_Fil" msprop:Generator_ColumnPropNameInTable="nom_FilColumn" msprop:Generator_UserColumnName="nom_Fil" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Intitulé_mod" msprop:Generator_ColumnVarNameInTable="columnIntitulé_mod" msprop:Generator_ColumnPropNameInRow="Intitulé_mod" msprop:Generator_ColumnPropNameInTable="Intitulé_modColumn" msprop:Generator_UserColumnName="Intitulé_mod" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="masseHoraire" msprop:Generator_ColumnVarNameInTable="columnmasseHoraire" msprop:Generator_ColumnPropNameInRow="masseHoraire" msprop:Generator_ColumnPropNameInTable="masseHoraireColumn" msprop:Generator_UserColumnName="masseHoraire" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Coefficient" msprop:Generator_ColumnVarNameInTable="columnCoefficient" msprop:Generator_ColumnPropNameInRow="Coefficient" msprop:Generator_ColumnPropNameInTable="CoefficientColumn" msprop:Generator_UserColumnName="Coefficient" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

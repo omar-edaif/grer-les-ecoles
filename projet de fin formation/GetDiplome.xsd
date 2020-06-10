@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GetDiplome" targetNamespace="http://tempuri.org/GetDiplome.xsd" xmlns:mstns="http://tempuri.org/GetDiplome.xsd" xmlns="http://tempuri.org/GetDiplome.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="APP_EcoleConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="APP_EcoleConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.projet_de_fin_formation.Properties.Settings.GlobalReference.Default.APP_EcoleConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GetDiplomeTableAdapter" GeneratorDataComponentClassName="GetDiplomeTableAdapter" Name="GetDiplome" UserDataComponentName="GetDiplomeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="APP_EcoleConnectionString (Settings)" DbObjectName="APP_Ecole.dbo.GetDiplome" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Code_Diplome, IntituléDiplome, intitulé_sect, Code_niveau, code_sect, intitué_niveau FROM dbo.GetDiplome</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Code_Diplome" DataSetColumn="Code_Diplome" />
+              <Mapping SourceColumn="IntituléDiplome" DataSetColumn="IntituléDiplome" />
+              <Mapping SourceColumn="intitulé_sect" DataSetColumn="intitulé_sect" />
+              <Mapping SourceColumn="Code_niveau" DataSetColumn="Code_niveau" />
+              <Mapping SourceColumn="code_sect" DataSetColumn="code_sect" />
+              <Mapping SourceColumn="intitué_niveau" DataSetColumn="intitué_niveau" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GetDiplome" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="GetDiplome" msprop:Generator_UserDSName="GetDiplome">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GetDiplome" msprop:Generator_TableClassName="GetDiplomeDataTable" msprop:Generator_TableVarName="tableGetDiplome" msprop:Generator_TablePropName="_GetDiplome" msprop:Generator_RowDeletingName="GetDiplomeRowDeleting" msprop:Generator_RowChangingName="GetDiplomeRowChanging" msprop:Generator_RowEvHandlerName="GetDiplomeRowChangeEventHandler" msprop:Generator_RowDeletedName="GetDiplomeRowDeleted" msprop:Generator_UserTableName="GetDiplome" msprop:Generator_RowChangedName="GetDiplomeRowChanged" msprop:Generator_RowEvArgName="GetDiplomeRowChangeEvent" msprop:Generator_RowClassName="GetDiplomeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Code_Diplome" msprop:Generator_ColumnVarNameInTable="columnCode_Diplome" msprop:Generator_ColumnPropNameInRow="Code_Diplome" msprop:Generator_ColumnPropNameInTable="Code_DiplomeColumn" msprop:Generator_UserColumnName="Code_Diplome" type="xs:int" />
+              <xs:element name="IntituléDiplome" msprop:Generator_ColumnVarNameInTable="columnIntituléDiplome" msprop:Generator_ColumnPropNameInRow="IntituléDiplome" msprop:Generator_ColumnPropNameInTable="IntituléDiplomeColumn" msprop:Generator_UserColumnName="IntituléDiplome">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="intitulé_sect" msprop:Generator_ColumnVarNameInTable="columnintitulé_sect" msprop:Generator_ColumnPropNameInRow="intitulé_sect" msprop:Generator_ColumnPropNameInTable="intitulé_sectColumn" msprop:Generator_UserColumnName="intitulé_sect" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Code_niveau" msprop:Generator_ColumnVarNameInTable="columnCode_niveau" msprop:Generator_ColumnPropNameInRow="Code_niveau" msprop:Generator_ColumnPropNameInTable="Code_niveauColumn" msprop:Generator_UserColumnName="Code_niveau" type="xs:int" />
+              <xs:element name="code_sect" msprop:Generator_ColumnVarNameInTable="columncode_sect" msprop:Generator_ColumnPropNameInRow="code_sect" msprop:Generator_ColumnPropNameInTable="code_sectColumn" msprop:Generator_UserColumnName="code_sect" type="xs:int" />
+              <xs:element name="intitué_niveau" msprop:Generator_ColumnVarNameInTable="columnintitué_niveau" msprop:Generator_ColumnPropNameInRow="intitué_niveau" msprop:Generator_ColumnPropNameInTable="intitué_niveauColumn" msprop:Generator_UserColumnName="intitué_niveau" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GetDiplome" />
+      <xs:field xpath="mstns:Code_Diplome" />
+      <xs:field xpath="mstns:Code_niveau" />
+      <xs:field xpath="mstns:code_sect" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

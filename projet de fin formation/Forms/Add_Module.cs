@@ -23,6 +23,7 @@ namespace projet_de_fin_formation.Forms
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = $"insert into Module values('{TxtModule.Text}')";
             ADO.Execute(cmd);
+            this.Close();
           
         }
     }
