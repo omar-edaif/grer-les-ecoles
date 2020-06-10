@@ -17,7 +17,12 @@ namespace projet_de_fin_formation.Forms
         {
             InitializeComponent();
         }
+        public void ChargerDGV()
+        {
+            // TODO: This line of code loads data into the 'gestionModule.Module' table. You can move, or remove it, as needed.
+            this.moduleTableAdapter.Fill(this.gestionModule.Module);
 
+        }
         private void btnAjouter_Click(object sender, EventArgs e)
         {
             SqlCommand cmd = new SqlCommand();
@@ -25,6 +30,29 @@ namespace projet_de_fin_formation.Forms
             ADO.Execute(cmd);
             this.Close();
           
+        }
+
+        private void Add_Module_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'gestionModule.Module' table. You can move, or remove it, as needed.
+            this.moduleTableAdapter.Fill(this.gestionModule.Module);
+
+        }
+
+        private void BtnSuprimer_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = ModulesDGV.CurrentRow;
+            DialogResult dialogResult = MessageBox.Show("vous etes sure de supprimer ce module la ", "La Suppression", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                SqlCommand cmd = new SqlCommand($"Delete from Module where code_mod = {row.Cells[0].Value.ToString()}");
+                ADO.Execute(cmd);
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+
+            }
+            ChargerDGV();
         }
     }
 }

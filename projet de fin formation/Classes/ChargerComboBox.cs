@@ -57,6 +57,15 @@ namespace projet_de_fin_formation
             combo.DisplayMember = "nom_Fil";
             combo.DataSource = dataset.Tables["Filière"];
         }
+        public static void ChargerComboAnneeScolaire(ComboBox combo)
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter("select * from AnneeScolaire", ADO.Cnx);
+            DataSet dataset = new DataSet();
+            adapter.Fill(dataset, "AnneScolaire");
+            combo.ValueMember = "id";
+            combo.DisplayMember = "AnneeScolaire";
+            combo.DataSource = dataset.Tables["AnneScolaire"];
+        }
 
     }
 }

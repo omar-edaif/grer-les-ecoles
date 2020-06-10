@@ -34,7 +34,6 @@
             this.BtnOpenFiliere = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.Btn_Suprimer = new System.Windows.Forms.Button();
             this.Btn_Ajouter = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,17 +42,22 @@
             this.TxtCofficient = new System.Windows.Forms.TextBox();
             this.comboModule = new System.Windows.Forms.ComboBox();
             this.comboFiliere = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.nomFilDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.intitulémodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.masseHoraireDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coefficientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ModuleFiliereDGV = new System.Windows.Forms.DataGridView();
             this.getModuleFiliereBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Btn_Suprimer = new System.Windows.Forms.Button();
             this.aPP_EcoleDataSet3 = new projet_de_fin_formation.APP_EcoleDataSet3();
+            this.getModuleFiliereBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.getModuleFiliereTableAdapter = new projet_de_fin_formation.APP_EcoleDataSet3TableAdapters.GetModuleFiliereTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codefilDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codemodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.ModuleFiliereDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getModuleFiliereBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aPP_EcoleDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getModuleFiliereBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnOpenFiliere
@@ -90,21 +94,6 @@
             this.label11.TabIndex = 41;
             this.label11.Text = "Filière :";
             // 
-            // Btn_Suprimer
-            // 
-            this.Btn_Suprimer.BackColor = System.Drawing.Color.LimeGreen;
-            this.Btn_Suprimer.FlatAppearance.BorderSize = 0;
-            this.Btn_Suprimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Suprimer.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Suprimer.ForeColor = System.Drawing.Color.Transparent;
-            this.Btn_Suprimer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Suprimer.Location = new System.Drawing.Point(367, 293);
-            this.Btn_Suprimer.Name = "Btn_Suprimer";
-            this.Btn_Suprimer.Size = new System.Drawing.Size(106, 35);
-            this.Btn_Suprimer.TabIndex = 36;
-            this.Btn_Suprimer.Text = "Supprimer";
-            this.Btn_Suprimer.UseVisualStyleBackColor = false;
-            // 
             // Btn_Ajouter
             // 
             this.Btn_Ajouter.BackColor = System.Drawing.Color.LimeGreen;
@@ -112,7 +101,7 @@
             this.Btn_Ajouter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Ajouter.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Ajouter.ForeColor = System.Drawing.Color.Transparent;
-            this.Btn_Ajouter.Location = new System.Drawing.Point(201, 293);
+            this.Btn_Ajouter.Location = new System.Drawing.Point(393, 293);
             this.Btn_Ajouter.Name = "Btn_Ajouter";
             this.Btn_Ajouter.Size = new System.Drawing.Size(106, 35);
             this.Btn_Ajouter.TabIndex = 38;
@@ -191,34 +180,36 @@
             this.comboFiliere.TabIndex = 48;
             this.comboFiliere.Enter += new System.EventHandler(this.comboFiliere_Enter);
             // 
-            // dataGridView1
+            // ModuleFiliereDGV
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ModuleFiliereDGV.AllowUserToAddRows = false;
+            this.ModuleFiliereDGV.AllowUserToDeleteRows = false;
+            this.ModuleFiliereDGV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.ModuleFiliereDGV.AutoGenerateColumns = false;
+            this.ModuleFiliereDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ModuleFiliereDGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.ModuleFiliereDGV.BackgroundColor = System.Drawing.Color.White;
+            this.ModuleFiliereDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ModuleFiliereDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.ModuleFiliereDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.DeepSkyBlue;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeight = 36;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nomFilDataGridViewTextBoxColumn,
-            this.intitulémodDataGridViewTextBoxColumn,
-            this.masseHoraireDataGridViewTextBoxColumn,
-            this.coefficientDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.getModuleFiliereBindingSource;
+            this.ModuleFiliereDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.ModuleFiliereDGV.ColumnHeadersHeight = 36;
+            this.ModuleFiliereDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.codefilDataGridViewTextBoxColumn,
+            this.codemodDataGridViewTextBoxColumn});
+            this.ModuleFiliereDGV.DataSource = this.getModuleFiliereBindingSource1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
@@ -226,65 +217,102 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dataGridView1.Location = new System.Drawing.Point(514, 120);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(557, 363);
-            this.dataGridView1.TabIndex = 50;
-            // 
-            // nomFilDataGridViewTextBoxColumn
-            // 
-            this.nomFilDataGridViewTextBoxColumn.DataPropertyName = "nom_Fil";
-            this.nomFilDataGridViewTextBoxColumn.HeaderText = "Filiere";
-            this.nomFilDataGridViewTextBoxColumn.Name = "nomFilDataGridViewTextBoxColumn";
-            this.nomFilDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // intitulémodDataGridViewTextBoxColumn
-            // 
-            this.intitulémodDataGridViewTextBoxColumn.DataPropertyName = "Intitulé_mod";
-            this.intitulémodDataGridViewTextBoxColumn.HeaderText = "Module";
-            this.intitulémodDataGridViewTextBoxColumn.Name = "intitulémodDataGridViewTextBoxColumn";
-            this.intitulémodDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // masseHoraireDataGridViewTextBoxColumn
-            // 
-            this.masseHoraireDataGridViewTextBoxColumn.DataPropertyName = "masseHoraire";
-            this.masseHoraireDataGridViewTextBoxColumn.HeaderText = "masseHoraire";
-            this.masseHoraireDataGridViewTextBoxColumn.Name = "masseHoraireDataGridViewTextBoxColumn";
-            this.masseHoraireDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // coefficientDataGridViewTextBoxColumn
-            // 
-            this.coefficientDataGridViewTextBoxColumn.DataPropertyName = "Coefficient";
-            this.coefficientDataGridViewTextBoxColumn.HeaderText = "Coefficient";
-            this.coefficientDataGridViewTextBoxColumn.Name = "coefficientDataGridViewTextBoxColumn";
-            this.coefficientDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ModuleFiliereDGV.DefaultCellStyle = dataGridViewCellStyle2;
+            this.ModuleFiliereDGV.EnableHeadersVisualStyles = false;
+            this.ModuleFiliereDGV.GridColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ModuleFiliereDGV.Location = new System.Drawing.Point(514, 120);
+            this.ModuleFiliereDGV.Name = "ModuleFiliereDGV";
+            this.ModuleFiliereDGV.ReadOnly = true;
+            this.ModuleFiliereDGV.RowHeadersVisible = false;
+            this.ModuleFiliereDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ModuleFiliereDGV.Size = new System.Drawing.Size(577, 393);
+            this.ModuleFiliereDGV.TabIndex = 50;
             // 
             // getModuleFiliereBindingSource
             // 
             this.getModuleFiliereBindingSource.DataMember = "GetModuleFiliere";
-            this.getModuleFiliereBindingSource.DataSource = this.aPP_EcoleDataSet3;
+            // 
+            // Btn_Suprimer
+            // 
+            this.Btn_Suprimer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Suprimer.BackColor = System.Drawing.Color.LimeGreen;
+            this.Btn_Suprimer.FlatAppearance.BorderSize = 0;
+            this.Btn_Suprimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Suprimer.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Suprimer.ForeColor = System.Drawing.Color.Transparent;
+            this.Btn_Suprimer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Suprimer.Location = new System.Drawing.Point(985, 537);
+            this.Btn_Suprimer.Name = "Btn_Suprimer";
+            this.Btn_Suprimer.Size = new System.Drawing.Size(106, 35);
+            this.Btn_Suprimer.TabIndex = 36;
+            this.Btn_Suprimer.Text = "Supprimer";
+            this.Btn_Suprimer.UseVisualStyleBackColor = false;
+            this.Btn_Suprimer.Click += new System.EventHandler(this.Btn_Suprimer_Click);
             // 
             // aPP_EcoleDataSet3
             // 
             this.aPP_EcoleDataSet3.DataSetName = "APP_EcoleDataSet3";
             this.aPP_EcoleDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // getModuleFiliereBindingSource1
+            // 
+            this.getModuleFiliereBindingSource1.DataMember = "GetModuleFiliere";
+            this.getModuleFiliereBindingSource1.DataSource = this.aPP_EcoleDataSet3;
+            // 
             // getModuleFiliereTableAdapter
             // 
             this.getModuleFiliereTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "nom_Fil";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Filiere";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Intitulé_mod";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Module";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "masseHoraire";
+            this.dataGridViewTextBoxColumn3.HeaderText = "masseHoraire";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Coefficient";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Coefficient";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // codefilDataGridViewTextBoxColumn
+            // 
+            this.codefilDataGridViewTextBoxColumn.DataPropertyName = "code_fil";
+            this.codefilDataGridViewTextBoxColumn.HeaderText = "code_fil";
+            this.codefilDataGridViewTextBoxColumn.Name = "codefilDataGridViewTextBoxColumn";
+            this.codefilDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codefilDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // codemodDataGridViewTextBoxColumn
+            // 
+            this.codemodDataGridViewTextBoxColumn.DataPropertyName = "code_mod";
+            this.codemodDataGridViewTextBoxColumn.HeaderText = "code_mod";
+            this.codemodDataGridViewTextBoxColumn.Name = "codemodDataGridViewTextBoxColumn";
+            this.codemodDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codemodDataGridViewTextBoxColumn.Visible = false;
             // 
             // Add_filiere_module
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1094, 506);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(1114, 595);
+            this.Controls.Add(this.ModuleFiliereDGV);
             this.Controls.Add(this.comboModule);
             this.Controls.Add(this.comboFiliere);
             this.Controls.Add(this.TxtCofficient);
@@ -301,9 +329,10 @@
             this.Text = "Gestion des module d\'un filiere";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.Load += new System.EventHandler(this.Add_filiere_module_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ModuleFiliereDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getModuleFiliereBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aPP_EcoleDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getModuleFiliereBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,7 +342,6 @@
         private System.Windows.Forms.Button BtnOpenFiliere;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button Btn_Suprimer;
         private System.Windows.Forms.Button Btn_Ajouter;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label1;
@@ -322,13 +350,21 @@
         private System.Windows.Forms.TextBox TxtCofficient;
         private System.Windows.Forms.ComboBox comboModule;
         private System.Windows.Forms.ComboBox comboFiliere;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private APP_EcoleDataSet3 aPP_EcoleDataSet3;
+        private System.Windows.Forms.DataGridView ModuleFiliereDGV;
         private System.Windows.Forms.BindingSource getModuleFiliereBindingSource;
-        private APP_EcoleDataSet3TableAdapters.GetModuleFiliereTableAdapter getModuleFiliereTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomFilDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn intitulémodDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn masseHoraireDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn coefficientDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button Btn_Suprimer;
+        private APP_EcoleDataSet3 aPP_EcoleDataSet3;
+        private System.Windows.Forms.BindingSource getModuleFiliereBindingSource1;
+        private APP_EcoleDataSet3TableAdapters.GetModuleFiliereTableAdapter getModuleFiliereTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codefilDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codemodDataGridViewTextBoxColumn;
     }
 }

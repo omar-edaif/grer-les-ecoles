@@ -21,5 +21,30 @@ namespace projet_de_fin_formation.Forms
         {
 
         }
+
+        private void txtcode_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcode_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void combosecteur_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboNiveau_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

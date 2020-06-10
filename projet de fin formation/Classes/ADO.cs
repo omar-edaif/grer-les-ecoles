@@ -38,6 +38,7 @@ namespace projet_de_fin_formation
                 cmd.Connection = Cnx;
                 cmd.ExecuteNonQuery();
                 OpenOrCloseConnection();
+                MessageBox.Show("votre opiratin effectuer");
 
             }
             catch (Exception e)

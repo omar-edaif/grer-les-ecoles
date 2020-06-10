@@ -18,11 +18,16 @@ namespace projet_de_fin_formation.Forms
         {
             InitializeComponent();
         }
-
+        public void ChargerDGV()
+        {
+            // TODO: This line of code loads data into the 'aPP_EcoleDataSet3.GetModuleFiliere' table. You can move, or remove it, as needed.
+            this.getModuleFiliereTableAdapter.Fill(this.aPP_EcoleDataSet3.GetModuleFiliere);
+        }
         private void Add_filiere_module_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'aPP_EcoleDataSet3.GetModuleFiliere' table. You can move, or remove it, as needed.
             this.getModuleFiliereTableAdapter.Fill(this.aPP_EcoleDataSet3.GetModuleFiliere);
+            ChargerDGV(); 
             // charger combobox Filiere 
             ChargerComboBox.ChargerComboFiliere(comboFiliere);
 
@@ -76,7 +81,32 @@ namespace projet_de_fin_formation.Forms
 
         private void Btn_Ajouter_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("insert into ");
+            SqlCommand cmd = new SqlCommand($"insert into ModuleFiliere values({comboModule.SelectedValue.ToString()},{comboFiliere.SelectedValue.ToString()},{TxtMasseHoraire.Text},{TxtCofficient.Text})");
+            ADO.Execute(cmd);
+            ChargerDGV();
+
+        }
+
+        private void Btn_Suprimer_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = ModuleFiliereDGV.CurrentRow;
+            DialogResult dialogResult = MessageBox.Show("vous etes sure de supprimer ce module la a cette filiere", "La Suppression", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+            SqlCommand cmd = new SqlCommand($"Delete from ModuleFiliere where code_fil={row.Cells[4].Value.ToString()} and code_mod = {row.Cells[5].Value.ToString()}");
+                ADO.Execute(cmd);
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+    
+            }
+            ChargerDGV();
+           
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -34,16 +34,17 @@
             this.BtnModifier = new System.Windows.Forms.Button();
             this.btnAjouter = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.CmbFiliere = new System.Windows.Forms.ComboBox();
-            this.cmbAnneScolaire = new System.Windows.Forms.ComboBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.TxtName = new System.Windows.Forms.TextBox();
+            this.combosecteur = new System.Windows.Forms.ComboBox();
+            this.txtcode = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtcode = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.BtnOpenFiliere = new System.Windows.Forms.Button();
+            this.comboNiveau = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -53,7 +54,7 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(504, 127);
+            this.dataGridView1.Location = new System.Drawing.Point(524, 118);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(614, 398);
             this.dataGridView1.TabIndex = 17;
@@ -114,69 +115,60 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.CmbFiliere);
-            this.groupBox1.Controls.Add(this.cmbAnneScolaire);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.BtnOpenFiliere);
+            this.groupBox1.Controls.Add(this.comboNiveau);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.TxtName);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.combosecteur);
+            this.groupBox1.Controls.Add(this.txtcode);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtcode);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(68, 113);
+            this.groupBox1.Location = new System.Drawing.Point(68, 118);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(421, 303);
+            this.groupBox1.Size = new System.Drawing.Size(439, 285);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Groupe : ";
             // 
-            // CmbFiliere
+            // TxtName
             // 
-            this.CmbFiliere.FormattingEnabled = true;
-            this.CmbFiliere.Location = new System.Drawing.Point(162, 173);
-            this.CmbFiliere.Name = "CmbFiliere";
-            this.CmbFiliere.Size = new System.Drawing.Size(249, 34);
-            this.CmbFiliere.TabIndex = 10;
+            this.TxtName.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.TxtName.Location = new System.Drawing.Point(160, 86);
+            this.TxtName.Name = "TxtName";
+            this.TxtName.Size = new System.Drawing.Size(249, 28);
+            this.TxtName.TabIndex = 15;
+            this.TxtName.TextChanged += new System.EventHandler(this.TxtName_TextChanged);
             // 
-            // cmbAnneScolaire
+            // combosecteur
             // 
-            this.cmbAnneScolaire.FormattingEnabled = true;
-            this.cmbAnneScolaire.Location = new System.Drawing.Point(162, 133);
-            this.cmbAnneScolaire.Name = "cmbAnneScolaire";
-            this.cmbAnneScolaire.Size = new System.Drawing.Size(249, 34);
-            this.cmbAnneScolaire.TabIndex = 10;
+            this.combosecteur.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.combosecteur.FormattingEnabled = true;
+            this.combosecteur.Location = new System.Drawing.Point(160, 127);
+            this.combosecteur.Name = "combosecteur";
+            this.combosecteur.Size = new System.Drawing.Size(249, 29);
+            this.combosecteur.TabIndex = 13;
+            this.combosecteur.SelectedIndexChanged += new System.EventHandler(this.combosecteur_SelectedIndexChanged);
             // 
-            // radioButton2
+            // txtcode
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.radioButton2.Location = new System.Drawing.Point(161, 255);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(165, 25);
-            this.radioButton2.TabIndex = 0;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Deuxième année";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.radioButton1.Location = new System.Drawing.Point(161, 224);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(129, 25);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "1ière année ";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.txtcode.Enabled = false;
+            this.txtcode.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.txtcode.Location = new System.Drawing.Point(160, 45);
+            this.txtcode.Name = "txtcode";
+            this.txtcode.ReadOnly = true;
+            this.txtcode.Size = new System.Drawing.Size(249, 28);
+            this.txtcode.TabIndex = 12;
+            this.txtcode.TextChanged += new System.EventHandler(this.txtcode_TextChanged_1);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(58, 213);
+            this.label4.Location = new System.Drawing.Point(83, 172);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 21);
             this.label4.TabIndex = 9;
@@ -186,27 +178,17 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(66, 178);
+            this.label6.Location = new System.Drawing.Point(84, 130);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 21);
             this.label6.TabIndex = 9;
             this.label6.Text = "Filiére :";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(2, 135);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(146, 21);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Année Scolaire :";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 91);
+            this.label1.Location = new System.Drawing.Point(27, 88);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 21);
             this.label1.TabIndex = 9;
@@ -216,19 +198,56 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 48);
+            this.label2.Location = new System.Drawing.Point(23, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(133, 21);
             this.label2.TabIndex = 9;
             this.label2.Text = "Code Groupe :";
             // 
-            // txtcode
+            // comboBox1
             // 
-            this.txtcode.Location = new System.Drawing.Point(162, 43);
-            this.txtcode.Name = "txtcode";
-            this.txtcode.ReadOnly = true;
-            this.txtcode.Size = new System.Drawing.Size(249, 32);
-            this.txtcode.TabIndex = 8;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Premiére année",
+            "Deuxiéme année"});
+            this.comboBox1.Location = new System.Drawing.Point(160, 169);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(249, 29);
+            this.comboBox1.TabIndex = 13;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.combosecteur_SelectedIndexChanged);
+            // 
+            // BtnOpenFiliere
+            // 
+            this.BtnOpenFiliere.BackColor = System.Drawing.Color.Transparent;
+            this.BtnOpenFiliere.BackgroundImage = global::projet_de_fin_formation.Properties.Resources.add_button_inside_black_circle__1_;
+            this.BtnOpenFiliere.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnOpenFiliere.FlatAppearance.BorderSize = 0;
+            this.BtnOpenFiliere.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnOpenFiliere.Location = new System.Drawing.Point(415, 212);
+            this.BtnOpenFiliere.Name = "BtnOpenFiliere";
+            this.BtnOpenFiliere.Size = new System.Drawing.Size(22, 25);
+            this.BtnOpenFiliere.TabIndex = 50;
+            this.BtnOpenFiliere.UseVisualStyleBackColor = false;
+            // 
+            // comboNiveau
+            // 
+            this.comboNiveau.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.comboNiveau.FormattingEnabled = true;
+            this.comboNiveau.Location = new System.Drawing.Point(160, 211);
+            this.comboNiveau.Name = "comboNiveau";
+            this.comboNiveau.Size = new System.Drawing.Size(249, 29);
+            this.comboNiveau.TabIndex = 49;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(9, 214);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(146, 21);
+            this.label5.TabIndex = 48;
+            this.label5.Text = "Année Scolaire :";
             // 
             // Add_Groupe
             // 
@@ -259,15 +278,16 @@
         private System.Windows.Forms.Button BtnModifier;
         private System.Windows.Forms.Button btnAjouter;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox CmbFiliere;
-        private System.Windows.Forms.ComboBox cmbAnneScolaire;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox TxtName;
+        private System.Windows.Forms.ComboBox combosecteur;
         private System.Windows.Forms.TextBox txtcode;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button BtnOpenFiliere;
+        private System.Windows.Forms.ComboBox comboNiveau;
+        private System.Windows.Forms.Label label5;
     }
 }

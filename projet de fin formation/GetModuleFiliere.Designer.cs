@@ -287,6 +287,10 @@ namespace projet_de_fin_formation {
             
             private global::System.Data.DataColumn columnCoefficient;
             
+            private global::System.Data.DataColumn columncode_fil;
+            
+            private global::System.Data.DataColumn columncode_mod;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public GetModuleFiliereDataTable() {
@@ -354,6 +358,22 @@ namespace projet_de_fin_formation {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn code_filColumn {
+                get {
+                    return this.columncode_fil;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn code_modColumn {
+                get {
+                    return this.columncode_mod;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -389,16 +409,25 @@ namespace projet_de_fin_formation {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GetModuleFiliereRow AddGetModuleFiliereRow(string nom_Fil, string Intitulé_mod, string masseHoraire, int Coefficient) {
+            public GetModuleFiliereRow AddGetModuleFiliereRow(string nom_Fil, string Intitulé_mod, string masseHoraire, int Coefficient, int code_fil, int code_mod) {
                 GetModuleFiliereRow rowGetModuleFiliereRow = ((GetModuleFiliereRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         nom_Fil,
                         Intitulé_mod,
                         masseHoraire,
-                        Coefficient};
+                        Coefficient,
+                        code_fil,
+                        code_mod};
                 rowGetModuleFiliereRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowGetModuleFiliereRow);
                 return rowGetModuleFiliereRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public GetModuleFiliereRow FindBycode_mod(int code_mod) {
+                return ((GetModuleFiliereRow)(this.Rows.Find(new object[] {
+                            code_mod})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -422,6 +451,8 @@ namespace projet_de_fin_formation {
                 this.columnIntitulé_mod = base.Columns["Intitulé_mod"];
                 this.columnmasseHoraire = base.Columns["masseHoraire"];
                 this.columnCoefficient = base.Columns["Coefficient"];
+                this.columncode_fil = base.Columns["code_fil"];
+                this.columncode_mod = base.Columns["code_mod"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -435,9 +466,17 @@ namespace projet_de_fin_formation {
                 base.Columns.Add(this.columnmasseHoraire);
                 this.columnCoefficient = new global::System.Data.DataColumn("Coefficient", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCoefficient);
+                this.columncode_fil = new global::System.Data.DataColumn("code_fil", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncode_fil);
+                this.columncode_mod = new global::System.Data.DataColumn("code_mod", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncode_mod);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columncode_mod}, true));
                 this.columnnom_Fil.MaxLength = 50;
                 this.columnIntitulé_mod.MaxLength = 50;
                 this.columnmasseHoraire.MaxLength = 50;
+                this.columncode_mod.AllowDBNull = false;
+                this.columncode_mod.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -644,6 +683,33 @@ namespace projet_de_fin_formation {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int code_fil {
+                get {
+                    try {
+                        return ((int)(this[this.tableGetModuleFiliere.code_filColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'code_fil\' in table \'GetModuleFiliere\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetModuleFiliere.code_filColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int code_mod {
+                get {
+                    return ((int)(this[this.tableGetModuleFiliere.code_modColumn]));
+                }
+                set {
+                    this[this.tableGetModuleFiliere.code_modColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isnom_FilNull() {
                 return this.IsNull(this.tableGetModuleFiliere.nom_FilColumn);
             }
@@ -688,6 +754,18 @@ namespace projet_de_fin_formation {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCoefficientNull() {
                 this[this.tableGetModuleFiliere.CoefficientColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscode_filNull() {
+                return this.IsNull(this.tableGetModuleFiliere.code_filColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcode_filNull() {
+                this[this.tableGetModuleFiliere.code_filColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -854,6 +932,8 @@ namespace projet_de_fin_formation.APP_EcoleDataSet3TableAdapters {
             tableMapping.ColumnMappings.Add("Intitulé_mod", "Intitulé_mod");
             tableMapping.ColumnMappings.Add("masseHoraire", "masseHoraire");
             tableMapping.ColumnMappings.Add("Coefficient", "Coefficient");
+            tableMapping.ColumnMappings.Add("code_fil", "code_fil");
+            tableMapping.ColumnMappings.Add("code_mod", "code_mod");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -870,8 +950,8 @@ namespace projet_de_fin_formation.APP_EcoleDataSet3TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT nom_Fil, Intitulé_mod, masseHoraire, Coefficient FROM dbo.GetModuleFiliere" +
-                "";
+            this._commandCollection[0].CommandText = "SELECT nom_Fil, Intitulé_mod, masseHoraire, Coefficient, code_fil, code_mod FROM " +
+                "dbo.GetModuleFiliere";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

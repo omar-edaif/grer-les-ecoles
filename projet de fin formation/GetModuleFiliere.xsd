@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="APP_EcoleConnectionString (Settings)" DbObjectName="APP_Ecole.dbo.GetModuleFiliere" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT nom_Fil, Intitulé_mod, masseHoraire, Coefficient FROM dbo.GetModuleFiliere</CommandText>
+                    <CommandText>SELECT nom_Fil, Intitulé_mod, masseHoraire, Coefficient, code_fil, code_mod FROM dbo.GetModuleFiliere</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -23,6 +23,8 @@
               <Mapping SourceColumn="Intitulé_mod" DataSetColumn="Intitulé_mod" />
               <Mapping SourceColumn="masseHoraire" DataSetColumn="masseHoraire" />
               <Mapping SourceColumn="Coefficient" DataSetColumn="Coefficient" />
+              <Mapping SourceColumn="code_fil" DataSetColumn="code_fil" />
+              <Mapping SourceColumn="code_mod" DataSetColumn="code_mod" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -59,10 +61,16 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Coefficient" msprop:Generator_ColumnVarNameInTable="columnCoefficient" msprop:Generator_ColumnPropNameInRow="Coefficient" msprop:Generator_ColumnPropNameInTable="CoefficientColumn" msprop:Generator_UserColumnName="Coefficient" type="xs:int" minOccurs="0" />
+              <xs:element name="code_fil" msprop:Generator_ColumnVarNameInTable="columncode_fil" msprop:Generator_ColumnPropNameInRow="code_fil" msprop:Generator_ColumnPropNameInTable="code_filColumn" msprop:Generator_UserColumnName="code_fil" type="xs:int" minOccurs="0" />
+              <xs:element name="code_mod" msprop:Generator_ColumnVarNameInTable="columncode_mod" msprop:Generator_ColumnPropNameInRow="code_mod" msprop:Generator_ColumnPropNameInTable="code_modColumn" msprop:Generator_UserColumnName="code_mod" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
       </xs:choice>
     </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GetModuleFiliere" />
+      <xs:field xpath="mstns:code_mod" />
+    </xs:unique>
   </xs:element>
 </xs:schema>
