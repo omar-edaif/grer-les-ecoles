@@ -312,6 +312,7 @@
             this.Controls.Add(this.groupBox1);
             this.MaximumSize = new System.Drawing.Size(1205, 606);
             this.Name = "Add_Diplome";
+            this.ShadowType = MetroFramework.Forms.MetroForm.MetroFormShadowType.SystemShadow;
             this.Text = "Gestion des diplomes";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.Load += new System.EventHandler(this.Add_Diplome_Load);

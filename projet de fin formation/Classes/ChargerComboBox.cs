@@ -47,15 +47,28 @@ namespace projet_de_fin_formation
             combo.DataSource = dataset.Tables["Module"];
         }
         // charger combobox Filiere 
-      
-        public static void ChargerComboFiliere(ComboBox combo)
+
+        public static void ChargerComboFiliere(ComboBox combo,string secteur=null)
         {
-            SqlDataAdapter adapter = new SqlDataAdapter("select * from Filière", ADO.Cnx);
-            DataSet dataset = new DataSet();
-            adapter.Fill(dataset, "Filière");
-            combo.ValueMember = "code_Fil";
-            combo.DisplayMember = "nom_Fil";
-            combo.DataSource = dataset.Tables["Filière"];
+            if (secteur==null)
+            {
+                SqlDataAdapter adapter = new SqlDataAdapter("select * from Filière", ADO.Cnx);
+                DataSet dataset = new DataSet();
+                adapter.Fill(dataset, "Filière");
+                combo.ValueMember = "code_Fil";
+                combo.DisplayMember = "nom_Fil";
+                combo.DataSource = dataset.Tables["Filière"];
+            }
+            else
+            {
+                SqlDataAdapter adapter = new SqlDataAdapter($"select * from Filière where code_secteur = {secteur}", ADO.Cnx);
+                DataSet dataset = new DataSet();
+                adapter.Fill(dataset, "Filière");
+                combo.ValueMember = "code_Fil";
+                combo.DisplayMember = "nom_Fil";
+                combo.DataSource = dataset.Tables["Filière"];
+            }
+           
         }
         public static void ChargerComboAnneeScolaire(ComboBox combo)
         {
@@ -67,5 +80,36 @@ namespace projet_de_fin_formation
             combo.DataSource = dataset.Tables["AnneScolaire"];
         }
 
+        public static void ChargerComboGroupes(ComboBox combo, string id =null)
+        {
+            try
+            {
+
+           
+            if (id==null)
+            {
+      SqlDataAdapter adapter = new SqlDataAdapter("select * from Groupe", ADO.Cnx);
+            DataSet dataset = new DataSet();
+            adapter.Fill(dataset, "Groupe");
+            combo.ValueMember = "Code_groupe";
+            combo.DisplayMember = "Nom_Groupe";
+            combo.DataSource = dataset.Tables["Groupe"];
+            }
+            else
+            {
+                SqlDataAdapter adapter = new SqlDataAdapter($"select * from Groupe where CodeFil = {id}", ADO.Cnx);
+                DataSet dataset = new DataSet();
+                adapter.Fill(dataset, "Groupe");
+                combo.ValueMember = "Code_groupe";
+                combo.DisplayMember = "Nom_Groupe";
+                combo.DataSource = dataset.Tables["Groupe"];
+                
+            }
+            }
+            catch 
+            {
+            }
+
+        }
     }
 }

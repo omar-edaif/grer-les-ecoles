@@ -173,6 +173,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GetFiliere.xsd</DependentUpon>
     </Compile>
+    <Compile Include="GetStagaire.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GetStagaire.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Add_AnneeScolaire.resx">
@@ -308,6 +313,17 @@
     </None>
     <None Include="GetFiliere.xss">
       <DependentUpon>GetFiliere.xsd</DependentUpon>
+    </None>
+    <None Include="GetStagaire.xsc">
+      <DependentUpon>GetStagaire.xsd</DependentUpon>
+    </None>
+    <None Include="GetStagaire.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GetStagaire.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GetStagaire.xss">
+      <DependentUpon>GetStagaire.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

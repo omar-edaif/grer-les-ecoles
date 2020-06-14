@@ -381,7 +381,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Name = "Add_Groupe";
-            this.ShadowType = MetroFramework.Forms.MetroForm.MetroFormShadowType.DropShadow;
+            this.ShadowType = MetroFramework.Forms.MetroForm.MetroFormShadowType.SystemShadow;
             this.Text = "Gestion des groupe ";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.Load += new System.EventHandler(this.Add_Groupe_Load);

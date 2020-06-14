@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAjouter = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.TxtModule = new System.Windows.Forms.TextBox();
             this.ModulesDGV = new System.Windows.Forms.DataGridView();
-            this.gestionModule = new projet_de_fin_formation.GestionModule();
-            this.moduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.moduleTableAdapter = new projet_de_fin_formation.GestionModuleTableAdapters.ModuleTableAdapter();
             this.codemodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.intitulémodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.moduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gestionModule = new projet_de_fin_formation.GestionModule();
+            this.moduleTableAdapter = new projet_de_fin_formation.GestionModuleTableAdapters.ModuleTableAdapter();
             this.BtnSuprimer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ModulesDGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gestionModule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moduleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gestionModule)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAjouter
@@ -53,7 +53,7 @@
             this.btnAjouter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAjouter.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAjouter.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAjouter.Location = new System.Drawing.Point(65, 233);
+            this.btnAjouter.Location = new System.Drawing.Point(153, 450);
             this.btnAjouter.Name = "btnAjouter";
             this.btnAjouter.Size = new System.Drawing.Size(129, 35);
             this.btnAjouter.TabIndex = 1;
@@ -93,49 +93,35 @@
             this.ModulesDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ModulesDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.ModulesDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.ModulesDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.ModulesDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.ModulesDGV.ColumnHeadersHeight = 36;
             this.ModulesDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codemodDataGridViewTextBoxColumn,
             this.intitulémodDataGridViewTextBoxColumn});
             this.ModulesDGV.DataSource = this.moduleBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ModulesDGV.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ModulesDGV.DefaultCellStyle = dataGridViewCellStyle4;
             this.ModulesDGV.EnableHeadersVisualStyles = false;
             this.ModulesDGV.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ModulesDGV.Location = new System.Drawing.Point(484, 121);
+            this.ModulesDGV.Location = new System.Drawing.Point(186, 155);
             this.ModulesDGV.Name = "ModulesDGV";
             this.ModulesDGV.ReadOnly = true;
             this.ModulesDGV.RowHeadersVisible = false;
             this.ModulesDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ModulesDGV.Size = new System.Drawing.Size(242, 217);
+            this.ModulesDGV.Size = new System.Drawing.Size(234, 284);
             this.ModulesDGV.TabIndex = 22;
-            // 
-            // gestionModule
-            // 
-            this.gestionModule.DataSetName = "GestionModule";
-            this.gestionModule.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // moduleBindingSource
-            // 
-            this.moduleBindingSource.DataMember = "Module";
-            this.moduleBindingSource.DataSource = this.gestionModule;
-            // 
-            // moduleTableAdapter
-            // 
-            this.moduleTableAdapter.ClearBeforeFill = true;
             // 
             // codemodDataGridViewTextBoxColumn
             // 
@@ -152,6 +138,20 @@
             this.intitulémodDataGridViewTextBoxColumn.Name = "intitulémodDataGridViewTextBoxColumn";
             this.intitulémodDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // moduleBindingSource
+            // 
+            this.moduleBindingSource.DataMember = "Module";
+            this.moduleBindingSource.DataSource = this.gestionModule;
+            // 
+            // gestionModule
+            // 
+            this.gestionModule.DataSetName = "GestionModule";
+            this.gestionModule.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // moduleTableAdapter
+            // 
+            this.moduleTableAdapter.ClearBeforeFill = true;
+            // 
             // BtnSuprimer
             // 
             this.BtnSuprimer.BackColor = System.Drawing.Color.LimeGreen;
@@ -159,7 +159,7 @@
             this.BtnSuprimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSuprimer.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSuprimer.ForeColor = System.Drawing.Color.Transparent;
-            this.BtnSuprimer.Location = new System.Drawing.Point(309, 233);
+            this.BtnSuprimer.Location = new System.Drawing.Point(319, 450);
             this.BtnSuprimer.Name = "BtnSuprimer";
             this.BtnSuprimer.Size = new System.Drawing.Size(129, 35);
             this.BtnSuprimer.TabIndex = 1;
@@ -171,21 +171,23 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(749, 379);
+            this.ClientSize = new System.Drawing.Size(585, 508);
             this.Controls.Add(this.ModulesDGV);
             this.Controls.Add(this.TxtModule);
             this.Controls.Add(this.BtnSuprimer);
             this.Controls.Add(this.btnAjouter);
             this.Controls.Add(this.label4);
+            this.MaximumSize = new System.Drawing.Size(585, 508);
             this.Name = "Add_Module";
+            this.ShadowType = MetroFramework.Forms.MetroForm.MetroFormShadowType.SystemShadow;
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = " ajouter Module";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.Load += new System.EventHandler(this.Add_Module_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ModulesDGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gestionModule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.moduleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gestionModule)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
