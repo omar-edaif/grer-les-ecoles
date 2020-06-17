@@ -297,15 +297,9 @@ namespace projet_de_fin_formation {
             
             private global::System.Data.DataColumn columnDateNaiss;
             
-            private global::System.Data.DataColumn columncodegrp;
-            
-            private global::System.Data.DataColumn columnnom_Fil;
-            
-            private global::System.Data.DataColumn columnintitulé_sect;
+            private global::System.Data.DataColumn columnCode_groupe;
             
             private global::System.Data.DataColumn columnNom_Groupe;
-            
-            private global::System.Data.DataColumn columndateInscription;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -414,25 +408,9 @@ namespace projet_de_fin_formation {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn codegrpColumn {
+            public global::System.Data.DataColumn Code_groupeColumn {
                 get {
-                    return this.columncodegrp;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn nom_FilColumn {
-                get {
-                    return this.columnnom_Fil;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn intitulé_sectColumn {
-                get {
-                    return this.columnintitulé_sect;
+                    return this.columnCode_groupe;
                 }
             }
             
@@ -441,14 +419,6 @@ namespace projet_de_fin_formation {
             public global::System.Data.DataColumn Nom_GroupeColumn {
                 get {
                     return this.columnNom_Groupe;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn dateInscriptionColumn {
-                get {
-                    return this.columndateInscription;
                 }
             }
             
@@ -489,7 +459,7 @@ namespace projet_de_fin_formation {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GetStagaireRow AddGetStagaireRow(int code_stagiaire, string nom_st, string prenom_st, string adress_st, byte[] Photo, string email_st, string genre, string tel_st, System.DateTime DateNaiss, int codegrp, string nom_Fil, string intitulé_sect, string Nom_Groupe, System.DateTime dateInscription) {
+            public GetStagaireRow AddGetStagaireRow(int code_stagiaire, string nom_st, string prenom_st, string adress_st, byte[] Photo, string email_st, string genre, string tel_st, System.DateTime DateNaiss, int Code_groupe, string Nom_Groupe) {
                 GetStagaireRow rowGetStagaireRow = ((GetStagaireRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         code_stagiaire,
@@ -501,11 +471,8 @@ namespace projet_de_fin_formation {
                         genre,
                         tel_st,
                         DateNaiss,
-                        codegrp,
-                        nom_Fil,
-                        intitulé_sect,
-                        Nom_Groupe,
-                        dateInscription};
+                        Code_groupe,
+                        Nom_Groupe};
                 rowGetStagaireRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowGetStagaireRow);
                 return rowGetStagaireRow;
@@ -544,11 +511,8 @@ namespace projet_de_fin_formation {
                 this.columngenre = base.Columns["genre"];
                 this.columntel_st = base.Columns["tel_st"];
                 this.columnDateNaiss = base.Columns["DateNaiss"];
-                this.columncodegrp = base.Columns["codegrp"];
-                this.columnnom_Fil = base.Columns["nom_Fil"];
-                this.columnintitulé_sect = base.Columns["intitulé_sect"];
+                this.columnCode_groupe = base.Columns["Code_groupe"];
                 this.columnNom_Groupe = base.Columns["Nom_Groupe"];
-                this.columndateInscription = base.Columns["dateInscription"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -572,16 +536,10 @@ namespace projet_de_fin_formation {
                 base.Columns.Add(this.columntel_st);
                 this.columnDateNaiss = new global::System.Data.DataColumn("DateNaiss", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDateNaiss);
-                this.columncodegrp = new global::System.Data.DataColumn("codegrp", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncodegrp);
-                this.columnnom_Fil = new global::System.Data.DataColumn("nom_Fil", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnom_Fil);
-                this.columnintitulé_sect = new global::System.Data.DataColumn("intitulé_sect", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnintitulé_sect);
+                this.columnCode_groupe = new global::System.Data.DataColumn("Code_groupe", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCode_groupe);
                 this.columnNom_Groupe = new global::System.Data.DataColumn("Nom_Groupe", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNom_Groupe);
-                this.columndateInscription = new global::System.Data.DataColumn("dateInscription", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndateInscription);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columncode_stagiaire}, true));
                 this.columncode_stagiaire.AllowDBNull = false;
@@ -592,8 +550,6 @@ namespace projet_de_fin_formation {
                 this.columnemail_st.MaxLength = 50;
                 this.columngenre.MaxLength = 50;
                 this.columntel_st.MaxLength = 50;
-                this.columnnom_Fil.MaxLength = 50;
-                this.columnintitulé_sect.MaxLength = 50;
                 this.columnNom_Groupe.MaxLength = 50;
                 this.ExtendedProperties.Add("Generator_TablePropName", "_GetStagaire");
                 this.ExtendedProperties.Add("Generator_UserTableName", "GetStagaire");
@@ -878,49 +834,17 @@ namespace projet_de_fin_formation {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int codegrp {
+            public int Code_groupe {
                 get {
                     try {
-                        return ((int)(this[this.tableGetStagaire.codegrpColumn]));
+                        return ((int)(this[this.tableGetStagaire.Code_groupeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'codegrp\' in table \'GetStagaire\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Code_groupe\' in table \'GetStagaire\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableGetStagaire.codegrpColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string nom_Fil {
-                get {
-                    try {
-                        return ((string)(this[this.tableGetStagaire.nom_FilColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'nom_Fil\' in table \'GetStagaire\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableGetStagaire.nom_FilColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string intitulé_sect {
-                get {
-                    try {
-                        return ((string)(this[this.tableGetStagaire.intitulé_sectColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'intitulé_sect\' in table \'GetStagaire\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableGetStagaire.intitulé_sectColumn] = value;
+                    this[this.tableGetStagaire.Code_groupeColumn] = value;
                 }
             }
             
@@ -937,22 +861,6 @@ namespace projet_de_fin_formation {
                 }
                 set {
                     this[this.tableGetStagaire.Nom_GroupeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime dateInscription {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableGetStagaire.dateInscriptionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'dateInscription\' in table \'GetStagaire\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableGetStagaire.dateInscriptionColumn] = value;
                 }
             }
             
@@ -1054,38 +962,14 @@ namespace projet_de_fin_formation {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IscodegrpNull() {
-                return this.IsNull(this.tableGetStagaire.codegrpColumn);
+            public bool IsCode_groupeNull() {
+                return this.IsNull(this.tableGetStagaire.Code_groupeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetcodegrpNull() {
-                this[this.tableGetStagaire.codegrpColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isnom_FilNull() {
-                return this.IsNull(this.tableGetStagaire.nom_FilColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setnom_FilNull() {
-                this[this.tableGetStagaire.nom_FilColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isintitulé_sectNull() {
-                return this.IsNull(this.tableGetStagaire.intitulé_sectColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setintitulé_sectNull() {
-                this[this.tableGetStagaire.intitulé_sectColumn] = global::System.Convert.DBNull;
+            public void SetCode_groupeNull() {
+                this[this.tableGetStagaire.Code_groupeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1098,18 +982,6 @@ namespace projet_de_fin_formation {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetNom_GroupeNull() {
                 this[this.tableGetStagaire.Nom_GroupeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsdateInscriptionNull() {
-                return this.IsNull(this.tableGetStagaire.dateInscriptionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetdateInscriptionNull() {
-                this[this.tableGetStagaire.dateInscriptionColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1281,11 +1153,8 @@ namespace projet_de_fin_formation.GetStagaireTableAdapters {
             tableMapping.ColumnMappings.Add("genre", "genre");
             tableMapping.ColumnMappings.Add("tel_st", "tel_st");
             tableMapping.ColumnMappings.Add("DateNaiss", "DateNaiss");
-            tableMapping.ColumnMappings.Add("codegrp", "codegrp");
-            tableMapping.ColumnMappings.Add("nom_Fil", "nom_Fil");
-            tableMapping.ColumnMappings.Add("intitulé_sect", "intitulé_sect");
+            tableMapping.ColumnMappings.Add("Code_groupe", "Code_groupe");
             tableMapping.ColumnMappings.Add("Nom_Groupe", "Nom_Groupe");
-            tableMapping.ColumnMappings.Add("dateInscription", "dateInscription");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1303,8 +1172,7 @@ namespace projet_de_fin_formation.GetStagaireTableAdapters {
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT code_stagiaire, nom_st, prenom_st, adress_st, Photo, email_st, genre, tel_" +
-                "st, DateNaiss, codegrp, nom_Fil, intitulé_sect, Nom_Groupe, dateInscription FROM" +
-                " dbo.GetStagaire";
+                "st, DateNaiss, Code_groupe, Nom_Groupe FROM dbo.GetStagaire";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

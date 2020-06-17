@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +23,14 @@ namespace projet_de_fin_formation.Forms
             ImageConverter converter = new ImageConverter();
             return (byte[])converter.ConvertTo(img, typeof(byte[]));
         }
-
+        public Image byteArrayToImage(byte[] bytesArr)
+        {
+            using (MemoryStream memstr = new MemoryStream(bytesArr))
+            {
+                Image img = Image.FromStream(memstr);
+                return img;
+            }
+        }
 
         public int NombreStagairInGroupe(string GroupeOfStagaire)
         {
@@ -50,6 +58,8 @@ namespace projet_de_fin_formation.Forms
       
         private void Form_inscription_Load(object sender, EventArgs e)
         {
+          
+    
 
             ChargerDGV();
             // charger combobox de ***secteur***
@@ -133,23 +143,92 @@ namespace projet_de_fin_formation.Forms
         {
             try
             {
-                if (NombreStagairInGroupe(ComboGroupes.SelectedValue.ToString())<=30)
+                if ((int?)((NombreStagairInGroupe(ComboGroupes.SelectedValue.ToString())))<=30)
                 {
                     var image = ImageToByte(imgStudent.Image);
-                    SqlCommand InsertStagire = new SqlCommand($"insert");
-
-
+                    SqlCommand InsertStagire = new SqlCommand($"insert into Stagiaire values ('{TxtName.Text}','{TxtPrenom.Text}','{TxtAdresse.Text}','{image}','{TxtEmail.Text}','{comboGenre.Text}','{TxtPhone.Text}','{DateNaissance.Text.ToString()}')");
+                    ADO.Execute(InsertStagire);
+                    SqlCommand cmd = new SqlCommand($"insert into Inscription values ( (select MAX(code_stagiaire)from Stagiaire),{ComboGroupes.SelectedValue.ToString()},GETDATE())");
+                    ADO.Execute(cmd);
                 }
+                else
+                {
+                    DialogResult dialogResult = MessageBox.Show("ce groupe la est plein , tu veus ajouter un neveau groupe", "probleme au niveu de groupes", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        projet_de_fin_formation.Forms.Add_Groupe form = new Add_Groupe();
+                        form.ShowDialog();
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        return;
+                    }
+                }
+                ChargerDGV();
             }
-            catch (Exception)
+            catch 
+            {
+            }
+         
+           
+        }
+
+
+        private void StagaireDGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
             {
 
-                throw;
+          
+            DataGridViewRow row = StagaireDGV.CurrentRow;
+            txtCode.Text = row.Cells[0].Value.ToString();
+            TxtName.Text = row.Cells[2].Value.ToString();
+            TxtPrenom.Text = row.Cells[3].Value.ToString();
+            TxtAdresse.Text = row.Cells[4].Value.ToString();
+            TxtEmail.Text = row.Cells[5].Value.ToString();
+            comboGenre.Text = row.Cells[6].Value.ToString();
+            TxtPhone.Text = row.Cells[7].Value.ToString();
+
+            DateNaissance.Value = DateTime.Parse(row.Cells[8].Value.ToString());
+            ComboGroupes.SelectedValue = (int)row.Cells[1].Value;
+            if (!row.Cells[5].Value.Equals(null))
+            {
+            imgStudent.Image = byteArrayToImage((byte[])row.Cells[5].Value);
             }
-            SqlCommand cmd = new SqlCommand("select COUNT (Code_groupe) from Inscription where Code_groupe =2");
+            }
+            catch 
+            {
+            }
+        }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult dialogResult = MessageBox.Show("vous voulez vraimennt supprimer le stagaire que vous choisire", "La suppression", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    var row = StagaireDGV.CurrentRow;
+                    SqlCommand cmd = new SqlCommand($"delete from Inscription where code_stagiaire={row.Cells[0].Value.ToString()} delete from Stagiaire where code_stagiaire = {row.Cells[0].Value.ToString()} ");
+                    ADO.Execute(cmd);
+                    ChargerDGV();
+          
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    return;
+                }
+                ChargerDGV();
+            }
+            catch 
+            {
+            }
+        
+        }
 
-            cmd = new SqlCommand("insert into Inscription values ( (select MAX(code_stagiaire)from Stagiaire),1,GETDATE())");
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

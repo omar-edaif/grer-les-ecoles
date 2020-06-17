@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="APP_EcoleConnectionString (Settings)" DbObjectName="APP_Ecole.dbo.GetStagaire" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT code_stagiaire, nom_st, prenom_st, adress_st, Photo, email_st, genre, tel_st, DateNaiss, codegrp, nom_Fil, intitulé_sect, Nom_Groupe, dateInscription FROM dbo.GetStagaire</CommandText>
+                    <CommandText>SELECT code_stagiaire, nom_st, prenom_st, adress_st, Photo, email_st, genre, tel_st, DateNaiss, Code_groupe, Nom_Groupe FROM dbo.GetStagaire</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -28,11 +28,8 @@
               <Mapping SourceColumn="genre" DataSetColumn="genre" />
               <Mapping SourceColumn="tel_st" DataSetColumn="tel_st" />
               <Mapping SourceColumn="DateNaiss" DataSetColumn="DateNaiss" />
-              <Mapping SourceColumn="codegrp" DataSetColumn="codegrp" />
-              <Mapping SourceColumn="nom_Fil" DataSetColumn="nom_Fil" />
-              <Mapping SourceColumn="intitulé_sect" DataSetColumn="intitulé_sect" />
+              <Mapping SourceColumn="Code_groupe" DataSetColumn="Code_groupe" />
               <Mapping SourceColumn="Nom_Groupe" DataSetColumn="Nom_Groupe" />
-              <Mapping SourceColumn="dateInscription" DataSetColumn="dateInscription" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -92,21 +89,7 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="DateNaiss" msprop:Generator_ColumnVarNameInTable="columnDateNaiss" msprop:Generator_ColumnPropNameInRow="DateNaiss" msprop:Generator_ColumnPropNameInTable="DateNaissColumn" msprop:Generator_UserColumnName="DateNaiss" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="codegrp" msprop:Generator_ColumnVarNameInTable="columncodegrp" msprop:Generator_ColumnPropNameInRow="codegrp" msprop:Generator_ColumnPropNameInTable="codegrpColumn" msprop:Generator_UserColumnName="codegrp" type="xs:int" minOccurs="0" />
-              <xs:element name="nom_Fil" msprop:Generator_ColumnVarNameInTable="columnnom_Fil" msprop:Generator_ColumnPropNameInRow="nom_Fil" msprop:Generator_ColumnPropNameInTable="nom_FilColumn" msprop:Generator_UserColumnName="nom_Fil" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="intitulé_sect" msprop:Generator_ColumnVarNameInTable="columnintitulé_sect" msprop:Generator_ColumnPropNameInRow="intitulé_sect" msprop:Generator_ColumnPropNameInTable="intitulé_sectColumn" msprop:Generator_UserColumnName="intitulé_sect" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="Code_groupe" msprop:Generator_ColumnVarNameInTable="columnCode_groupe" msprop:Generator_ColumnPropNameInRow="Code_groupe" msprop:Generator_ColumnPropNameInTable="Code_groupeColumn" msprop:Generator_UserColumnName="Code_groupe" type="xs:int" minOccurs="0" />
               <xs:element name="Nom_Groupe" msprop:Generator_ColumnVarNameInTable="columnNom_Groupe" msprop:Generator_ColumnPropNameInRow="Nom_Groupe" msprop:Generator_ColumnPropNameInTable="Nom_GroupeColumn" msprop:Generator_UserColumnName="Nom_Groupe" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -114,7 +97,6 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="dateInscription" msprop:Generator_ColumnVarNameInTable="columndateInscription" msprop:Generator_ColumnPropNameInRow="dateInscription" msprop:Generator_ColumnPropNameInTable="dateInscriptionColumn" msprop:Generator_UserColumnName="dateInscription" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
