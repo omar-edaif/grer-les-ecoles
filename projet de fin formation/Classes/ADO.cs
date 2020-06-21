@@ -11,8 +11,7 @@ namespace projet_de_fin_formation
 {
     class ADO
     {
-        private static readonly string connectionString = ConfigurationManager.ConnectionStrings["PFF"].ConnectionString;
-
+        public static readonly string connectionString = ConfigurationManager.ConnectionStrings["PFF"].ConnectionString;
 
        static public SqlConnection Cnx = new SqlConnection(connectionString);
        

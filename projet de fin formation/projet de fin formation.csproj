@@ -77,16 +77,40 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>APP_EcoleDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Classes\UserServices.cs" />
     <Compile Include="Forms\Add_AnneeScolaire.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Add_AnneeScolaire.Designer.cs">
       <DependentUpon>Add_AnneeScolaire.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Add_NewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Add_NewUser.Designer.cs">
+      <DependentUpon>Add_NewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_Menu.Designer.cs">
+      <DependentUpon>Form_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_User.Designer.cs">
+      <DependentUpon>Form_User.cs</DependentUpon>
+    </Compile>
     <Compile Include="GestionModule.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GestionModule.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GetExams.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GetExams.xsd</DependentUpon>
     </Compile>
     <Compile Include="GetGroupes.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -180,6 +204,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Classes\User.cs" />
     <EmbeddedResource Include="Forms\Add_AnneeScolaire.resx">
       <DependentUpon>Add_AnneeScolaire.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,6 +223,9 @@
     <EmbeddedResource Include="Forms\Add_Module.resx">
       <DependentUpon>Add_Module.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Add_NewUser.resx">
+      <DependentUpon>Add_NewUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Add_Niveau.resx">
       <DependentUpon>Add_Niveau.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,6 +240,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_inscription.resx">
       <DependentUpon>Form_inscription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_Menu.resx">
+      <DependentUpon>Form_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_User.resx">
+      <DependentUpon>Form_User.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -269,6 +303,17 @@
     </None>
     <None Include="GestionModule.xss">
       <DependentUpon>GestionModule.xsd</DependentUpon>
+    </None>
+    <None Include="GetExams.xsc">
+      <DependentUpon>GetExams.xsd</DependentUpon>
+    </None>
+    <None Include="GetExams.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GetExams.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GetExams.xss">
+      <DependentUpon>GetExams.xsd</DependentUpon>
     </None>
     <None Include="GetGroupes.xsc">
       <DependentUpon>GetGroupes.xsd</DependentUpon>
@@ -339,6 +384,7 @@
   <ItemGroup>
     <Content Include="MetroFramework.dll" />
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\pictureBox1.Image.png" />
     <None Include="Resources\327-portfolio.png" />
     <None Include="Resources\add-button-inside-black-circle %281%29.png" />
     <None Include="Resources\add-button-inside-black-circle.png" />

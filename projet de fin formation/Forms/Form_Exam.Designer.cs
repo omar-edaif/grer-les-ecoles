@@ -28,25 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.DiplomesDGV = new System.Windows.Forms.DataGridView();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ComboModule = new System.Windows.Forms.ComboBox();
+            this.ComboGroupe = new System.Windows.Forms.ComboBox();
+            this.ComboFiliere = new System.Windows.Forms.ComboBox();
+            this.ComboSecteur = new System.Windows.Forms.ComboBox();
+            this.Sauvgard = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.ComboSecteur = new System.Windows.Forms.ComboBox();
-            this.ComboGroupe = new System.Windows.Forms.ComboBox();
-            this.ComboFiliere = new System.Windows.Forms.ComboBox();
-            this.ComboModule = new System.Windows.Forms.ComboBox();
+            this.ExamDGV = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.intitulémodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Note = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.getExamsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.getExams = new projet_de_fin_formation.GetExams();
+            this.getExamsTableAdapter = new projet_de_fin_formation.GetExamsTableAdapters.GetExamsTableAdapter();
+            this.OpenFormModule = new System.Windows.Forms.Button();
+            this.OpenFormFiliere = new System.Windows.Forms.Button();
+            this.OpenFormGroupe = new System.Windows.Forms.Button();
+            this.OpenFormSecteur = new System.Windows.Forms.Button();
             this.metroPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DiplomesDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExamDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getExamsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getExams)).BeginInit();
             this.SuspendLayout();
             // 
             // metroPanel1
@@ -56,16 +67,16 @@
             this.metroPanel1.Controls.Add(this.ComboGroupe);
             this.metroPanel1.Controls.Add(this.ComboFiliere);
             this.metroPanel1.Controls.Add(this.ComboSecteur);
-            this.metroPanel1.Controls.Add(this.DiplomesDGV);
-            this.metroPanel1.Controls.Add(this.button5);
-            this.metroPanel1.Controls.Add(this.button4);
-            this.metroPanel1.Controls.Add(this.button1);
-            this.metroPanel1.Controls.Add(this.button3);
-            this.metroPanel1.Controls.Add(this.button2);
+            this.metroPanel1.Controls.Add(this.Sauvgard);
+            this.metroPanel1.Controls.Add(this.OpenFormModule);
+            this.metroPanel1.Controls.Add(this.OpenFormFiliere);
+            this.metroPanel1.Controls.Add(this.OpenFormGroupe);
+            this.metroPanel1.Controls.Add(this.OpenFormSecteur);
             this.metroPanel1.Controls.Add(this.label2);
             this.metroPanel1.Controls.Add(this.label11);
             this.metroPanel1.Controls.Add(this.label1);
             this.metroPanel1.Controls.Add(this.label12);
+            this.metroPanel1.Controls.Add(this.ExamDGV);
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
@@ -77,120 +88,61 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // DiplomesDGV
+            // ComboModule
             // 
-            this.DiplomesDGV.AllowUserToAddRows = false;
-            this.DiplomesDGV.AllowUserToDeleteRows = false;
-            this.DiplomesDGV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DiplomesDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DiplomesDGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
-            this.DiplomesDGV.BackgroundColor = System.Drawing.Color.White;
-            this.DiplomesDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DiplomesDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            this.DiplomesDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.DiplomesDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.DiplomesDGV.ColumnHeadersHeight = 36;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DiplomesDGV.DefaultCellStyle = dataGridViewCellStyle4;
-            this.DiplomesDGV.EnableHeadersVisualStyles = false;
-            this.DiplomesDGV.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.DiplomesDGV.Location = new System.Drawing.Point(257, 150);
-            this.DiplomesDGV.Name = "DiplomesDGV";
-            this.DiplomesDGV.ReadOnly = true;
-            this.DiplomesDGV.RowHeadersVisible = false;
-            this.DiplomesDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DiplomesDGV.Size = new System.Drawing.Size(780, 414);
-            this.DiplomesDGV.TabIndex = 68;
+            this.ComboModule.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.ComboModule.FormattingEnabled = true;
+            this.ComboModule.Location = new System.Drawing.Point(808, 88);
+            this.ComboModule.Name = "ComboModule";
+            this.ComboModule.Size = new System.Drawing.Size(270, 29);
+            this.ComboModule.TabIndex = 69;
+            this.ComboModule.SelectedIndexChanged += new System.EventHandler(this.ComboModule_SelectedIndexChanged);
             // 
-            // button5
+            // ComboGroupe
             // 
-            this.button5.BackColor = System.Drawing.Color.LimeGreen;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Transparent;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(1077, 592);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(106, 35);
-            this.button5.TabIndex = 67;
-            this.button5.Text = "Sauvgarder";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.ComboGroupe.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.ComboGroupe.FormattingEnabled = true;
+            this.ComboGroupe.Location = new System.Drawing.Point(204, 88);
+            this.ComboGroupe.Name = "ComboGroupe";
+            this.ComboGroupe.Size = new System.Drawing.Size(270, 29);
+            this.ComboGroupe.TabIndex = 69;
+            this.ComboGroupe.SelectedIndexChanged += new System.EventHandler(this.ComboGroupe_SelectedIndexChanged);
+            this.ComboGroupe.Enter += new System.EventHandler(this.ComboGroupe_Enter);
             // 
-            // button4
+            // ComboFiliere
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = global::projet_de_fin_formation.Properties.Resources.add_button_inside_black_circle__1_;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(1084, 91);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(22, 25);
-            this.button4.TabIndex = 65;
-            this.button4.UseVisualStyleBackColor = false;
+            this.ComboFiliere.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.ComboFiliere.FormattingEnabled = true;
+            this.ComboFiliere.Location = new System.Drawing.Point(808, 52);
+            this.ComboFiliere.Name = "ComboFiliere";
+            this.ComboFiliere.Size = new System.Drawing.Size(270, 29);
+            this.ComboFiliere.TabIndex = 69;
+            this.ComboFiliere.Enter += new System.EventHandler(this.ComboFiliere_Enter);
             // 
-            // button1
+            // ComboSecteur
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::projet_de_fin_formation.Properties.Resources.add_button_inside_black_circle__1_;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1084, 55);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(22, 25);
-            this.button1.TabIndex = 65;
-            this.button1.UseVisualStyleBackColor = false;
+            this.ComboSecteur.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.ComboSecteur.FormattingEnabled = true;
+            this.ComboSecteur.Location = new System.Drawing.Point(204, 49);
+            this.ComboSecteur.Name = "ComboSecteur";
+            this.ComboSecteur.Size = new System.Drawing.Size(270, 29);
+            this.ComboSecteur.TabIndex = 69;
             // 
-            // button3
+            // Sauvgard
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = global::projet_de_fin_formation.Properties.Resources.add_button_inside_black_circle__1_;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(480, 91);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(22, 25);
-            this.button3.TabIndex = 65;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::projet_de_fin_formation.Properties.Resources.add_button_inside_black_circle__1_;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(480, 51);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(22, 27);
-            this.button2.TabIndex = 65;
-            this.button2.UseVisualStyleBackColor = false;
+            this.Sauvgard.BackColor = System.Drawing.Color.LimeGreen;
+            this.Sauvgard.FlatAppearance.BorderSize = 0;
+            this.Sauvgard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Sauvgard.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sauvgard.ForeColor = System.Drawing.Color.Transparent;
+            this.Sauvgard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Sauvgard.Location = new System.Drawing.Point(1077, 592);
+            this.Sauvgard.Name = "Sauvgard";
+            this.Sauvgard.Size = new System.Drawing.Size(106, 35);
+            this.Sauvgard.TabIndex = 67;
+            this.Sauvgard.Text = "Sauvgarder";
+            this.Sauvgard.UseVisualStyleBackColor = false;
+            this.Sauvgard.Click += new System.EventHandler(this.Sauvgard_Click);
             // 
             // label2
             // 
@@ -232,43 +184,161 @@
             this.label12.TabIndex = 55;
             this.label12.Text = "Module :";
             // 
-            // ComboSecteur
+            // ExamDGV
             // 
-            this.ComboSecteur.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.ComboSecteur.FormattingEnabled = true;
-            this.ComboSecteur.Location = new System.Drawing.Point(204, 49);
-            this.ComboSecteur.Name = "ComboSecteur";
-            this.ComboSecteur.Size = new System.Drawing.Size(270, 29);
-            this.ComboSecteur.TabIndex = 69;
+            this.ExamDGV.AllowUserToAddRows = false;
+            this.ExamDGV.AllowUserToDeleteRows = false;
+            this.ExamDGV.AutoGenerateColumns = false;
+            this.ExamDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ExamDGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.ExamDGV.BackgroundColor = System.Drawing.Color.White;
+            this.ExamDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ExamDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.ExamDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.ExamDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.ExamDGV.ColumnHeadersHeight = 36;
+            this.ExamDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.intitulémodDataGridViewTextBoxColumn,
+            this.Note});
+            this.ExamDGV.DataSource = this.getExamsBindingSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ExamDGV.DefaultCellStyle = dataGridViewCellStyle2;
+            this.ExamDGV.EnableHeadersVisualStyles = false;
+            this.ExamDGV.GridColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ExamDGV.Location = new System.Drawing.Point(204, 150);
+            this.ExamDGV.Name = "ExamDGV";
+            this.ExamDGV.RowHeadersVisible = false;
+            this.ExamDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ExamDGV.Size = new System.Drawing.Size(874, 414);
+            this.ExamDGV.TabIndex = 68;
+            this.ExamDGV.CellLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.ExamDGV_CellLeave);
             // 
-            // ComboGroupe
+            // dataGridViewTextBoxColumn1
             // 
-            this.ComboGroupe.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.ComboGroupe.FormattingEnabled = true;
-            this.ComboGroupe.Location = new System.Drawing.Point(204, 88);
-            this.ComboGroupe.Name = "ComboGroupe";
-            this.ComboGroupe.Size = new System.Drawing.Size(270, 29);
-            this.ComboGroupe.TabIndex = 69;
-            this.ComboGroupe.Enter += new System.EventHandler(this.ComboGroupe_Enter);
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "code_stagiaire";
+            this.dataGridViewTextBoxColumn1.HeaderText = "code_stagiaire";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
             // 
-            // ComboFiliere
+            // dataGridViewTextBoxColumn2
             // 
-            this.ComboFiliere.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.ComboFiliere.FormattingEnabled = true;
-            this.ComboFiliere.Location = new System.Drawing.Point(808, 52);
-            this.ComboFiliere.Name = "ComboFiliere";
-            this.ComboFiliere.Size = new System.Drawing.Size(270, 29);
-            this.ComboFiliere.TabIndex = 69;
-            this.ComboFiliere.Enter += new System.EventHandler(this.ComboFiliere_Enter);
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "nom_st";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nom";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // ComboModule
+            // dataGridViewTextBoxColumn3
             // 
-            this.ComboModule.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.ComboModule.FormattingEnabled = true;
-            this.ComboModule.Location = new System.Drawing.Point(808, 88);
-            this.ComboModule.Name = "ComboModule";
-            this.ComboModule.Size = new System.Drawing.Size(270, 29);
-            this.ComboModule.TabIndex = 69;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "prenom_st";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Prénom";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // intitulémodDataGridViewTextBoxColumn
+            // 
+            this.intitulémodDataGridViewTextBoxColumn.DataPropertyName = "Intitulé_mod";
+            this.intitulémodDataGridViewTextBoxColumn.HeaderText = "Module";
+            this.intitulémodDataGridViewTextBoxColumn.Name = "intitulémodDataGridViewTextBoxColumn";
+            this.intitulémodDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Note
+            // 
+            this.Note.HeaderText = "Note";
+            this.Note.Name = "Note";
+            // 
+            // getExamsBindingSource
+            // 
+            this.getExamsBindingSource.DataMember = "GetExams";
+            this.getExamsBindingSource.DataSource = this.getExams;
+            // 
+            // getExams
+            // 
+            this.getExams.DataSetName = "GetExams";
+            this.getExams.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // getExamsTableAdapter
+            // 
+            this.getExamsTableAdapter.ClearBeforeFill = true;
+            // 
+            // OpenFormModule
+            // 
+            this.OpenFormModule.BackColor = System.Drawing.Color.Transparent;
+            this.OpenFormModule.BackgroundImage = global::projet_de_fin_formation.Properties.Resources.add_button_inside_black_circle__1_;
+            this.OpenFormModule.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.OpenFormModule.FlatAppearance.BorderSize = 0;
+            this.OpenFormModule.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.OpenFormModule.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.OpenFormModule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OpenFormModule.Location = new System.Drawing.Point(1084, 91);
+            this.OpenFormModule.Name = "OpenFormModule";
+            this.OpenFormModule.Size = new System.Drawing.Size(22, 25);
+            this.OpenFormModule.TabIndex = 65;
+            this.OpenFormModule.UseVisualStyleBackColor = false;
+            this.OpenFormModule.Click += new System.EventHandler(this.OpenFormModule_Click);
+            // 
+            // OpenFormFiliere
+            // 
+            this.OpenFormFiliere.BackColor = System.Drawing.Color.Transparent;
+            this.OpenFormFiliere.BackgroundImage = global::projet_de_fin_formation.Properties.Resources.add_button_inside_black_circle__1_;
+            this.OpenFormFiliere.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.OpenFormFiliere.FlatAppearance.BorderSize = 0;
+            this.OpenFormFiliere.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.OpenFormFiliere.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.OpenFormFiliere.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OpenFormFiliere.Location = new System.Drawing.Point(1084, 55);
+            this.OpenFormFiliere.Name = "OpenFormFiliere";
+            this.OpenFormFiliere.Size = new System.Drawing.Size(22, 25);
+            this.OpenFormFiliere.TabIndex = 65;
+            this.OpenFormFiliere.UseVisualStyleBackColor = false;
+            this.OpenFormFiliere.Click += new System.EventHandler(this.OpenFormFiliere_Click);
+            // 
+            // OpenFormGroupe
+            // 
+            this.OpenFormGroupe.BackColor = System.Drawing.Color.Transparent;
+            this.OpenFormGroupe.BackgroundImage = global::projet_de_fin_formation.Properties.Resources.add_button_inside_black_circle__1_;
+            this.OpenFormGroupe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.OpenFormGroupe.FlatAppearance.BorderSize = 0;
+            this.OpenFormGroupe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.OpenFormGroupe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.OpenFormGroupe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OpenFormGroupe.Location = new System.Drawing.Point(480, 91);
+            this.OpenFormGroupe.Name = "OpenFormGroupe";
+            this.OpenFormGroupe.Size = new System.Drawing.Size(22, 25);
+            this.OpenFormGroupe.TabIndex = 65;
+            this.OpenFormGroupe.UseVisualStyleBackColor = false;
+            this.OpenFormGroupe.Click += new System.EventHandler(this.OpenFormGroupe_Click);
+            // 
+            // OpenFormSecteur
+            // 
+            this.OpenFormSecteur.BackColor = System.Drawing.Color.Transparent;
+            this.OpenFormSecteur.BackgroundImage = global::projet_de_fin_formation.Properties.Resources.add_button_inside_black_circle__1_;
+            this.OpenFormSecteur.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.OpenFormSecteur.FlatAppearance.BorderSize = 0;
+            this.OpenFormSecteur.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.OpenFormSecteur.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.OpenFormSecteur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OpenFormSecteur.Location = new System.Drawing.Point(480, 51);
+            this.OpenFormSecteur.Name = "OpenFormSecteur";
+            this.OpenFormSecteur.Size = new System.Drawing.Size(22, 27);
+            this.OpenFormSecteur.TabIndex = 65;
+            this.OpenFormSecteur.UseVisualStyleBackColor = false;
+            this.OpenFormSecteur.Click += new System.EventHandler(this.OpenFormSecteur_Click);
             // 
             // Form_Exam
             // 
@@ -277,12 +347,15 @@
             this.ClientSize = new System.Drawing.Size(1226, 713);
             this.Controls.Add(this.metroPanel1);
             this.Name = "Form_Exam";
+            this.ShadowType = MetroFramework.Forms.MetroForm.MetroFormShadowType.DropShadow;
             this.Text = "Gestion des exams";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.Load += new System.EventHandler(this.Form_Exam_Load);
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DiplomesDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExamDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getExamsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getExams)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -294,15 +367,26 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridView DiplomesDGV;
+        private System.Windows.Forms.Button Sauvgard;
+        private System.Windows.Forms.Button OpenFormSecteur;
+        private System.Windows.Forms.Button OpenFormModule;
+        private System.Windows.Forms.Button OpenFormFiliere;
+        private System.Windows.Forms.Button OpenFormGroupe;
+        private System.Windows.Forms.DataGridView ExamDGV;
         private System.Windows.Forms.ComboBox ComboModule;
         private System.Windows.Forms.ComboBox ComboGroupe;
         private System.Windows.Forms.ComboBox ComboFiliere;
         private System.Windows.Forms.ComboBox ComboSecteur;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codestagiaireDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomstDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prenomstDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource getExamsBindingSource;
+        private GetExams getExams;
+        private GetExamsTableAdapters.GetExamsTableAdapter getExamsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn intitulémodDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Note;
     }
 }

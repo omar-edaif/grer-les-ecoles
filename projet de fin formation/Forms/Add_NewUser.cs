@@ -10,21 +10,18 @@ using System.Windows.Forms;
 
 namespace projet_de_fin_formation.Forms
 {
-    public partial class Form_Enseignant : MetroFramework.Forms.MetroForm
+    public partial class Add_NewUser : MetroFramework.Forms.MetroForm
     {
-        public Form_Enseignant()
+        public Add_NewUser()
         {
             InitializeComponent();
         }
 
-        private void Form_Enseignant_Load(object sender, EventArgs e)
+        private void Add_NewUser_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
+            ComboBoxRole.ValueMember = "Id";
+            ComboBoxRole.DisplayMember = "Name";
+            ComboBoxRole.DataSource = UserServices.GetAllRoles();
         }
     }
 }

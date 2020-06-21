@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnImage = new System.Windows.Forms.Button();
             this.imgStudent = new System.Windows.Forms.PictureBox();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
@@ -62,11 +62,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.StagaireDGV = new System.Windows.Forms.DataGridView();
-            this.getStagaireBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.getStagaire = new projet_de_fin_formation.GetStagaire();
-            this.button5 = new System.Windows.Forms.Button();
-            this.getStagaireBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.getStagaireTableAdapter = new projet_de_fin_formation.GetStagaireTableAdapters.GetStagaireTableAdapter();
             this.codestagiaireDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codegroupeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomstDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,6 +73,11 @@
             this.dateNaissDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomGroupeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.photoDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.getStagaireBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.getStagaire = new projet_de_fin_formation.GetStagaire();
+            this.button5 = new System.Windows.Forms.Button();
+            this.getStagaireBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.getStagaireTableAdapter = new projet_de_fin_formation.GetStagaireTableAdapters.GetStagaireTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.imgStudent)).BeginInit();
             this.metroPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -179,7 +179,7 @@
             this.comboGenre.Items.AddRange(new object[] {
             "Homme",
             "Femme"});
-            this.comboGenre.Location = new System.Drawing.Point(918, 185);
+            this.comboGenre.Location = new System.Drawing.Point(863, 185);
             this.comboGenre.Name = "comboGenre";
             this.comboGenre.Size = new System.Drawing.Size(273, 29);
             this.comboGenre.TabIndex = 10;
@@ -189,7 +189,7 @@
             this.ComboGroupes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ComboGroupes.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.ComboGroupes.FormattingEnabled = true;
-            this.ComboGroupes.Location = new System.Drawing.Point(918, 151);
+            this.ComboGroupes.Location = new System.Drawing.Point(863, 151);
             this.ComboGroupes.Name = "ComboGroupes";
             this.ComboGroupes.Size = new System.Drawing.Size(273, 29);
             this.ComboGroupes.TabIndex = 9;
@@ -200,7 +200,7 @@
             this.ComboFiliere.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ComboFiliere.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.ComboFiliere.FormattingEnabled = true;
-            this.ComboFiliere.Location = new System.Drawing.Point(918, 116);
+            this.ComboFiliere.Location = new System.Drawing.Point(863, 116);
             this.ComboFiliere.Name = "ComboFiliere";
             this.ComboFiliere.Size = new System.Drawing.Size(273, 29);
             this.ComboFiliere.TabIndex = 8;
@@ -211,7 +211,7 @@
             this.ComboSecteur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ComboSecteur.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.ComboSecteur.FormattingEnabled = true;
-            this.ComboSecteur.Location = new System.Drawing.Point(918, 84);
+            this.ComboSecteur.Location = new System.Drawing.Point(863, 84);
             this.ComboSecteur.Name = "ComboSecteur";
             this.ComboSecteur.Size = new System.Drawing.Size(273, 29);
             this.ComboSecteur.TabIndex = 7;
@@ -241,7 +241,7 @@
             this.FormOpenFiliere.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.FormOpenFiliere.FlatAppearance.BorderSize = 0;
             this.FormOpenFiliere.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FormOpenFiliere.Location = new System.Drawing.Point(1194, 121);
+            this.FormOpenFiliere.Location = new System.Drawing.Point(1139, 121);
             this.FormOpenFiliere.Name = "FormOpenFiliere";
             this.FormOpenFiliere.Size = new System.Drawing.Size(20, 21);
             this.FormOpenFiliere.TabIndex = 34;
@@ -256,7 +256,7 @@
             this.OpenFormGroupes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.OpenFormGroupes.FlatAppearance.BorderSize = 0;
             this.OpenFormGroupes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OpenFormGroupes.Location = new System.Drawing.Point(1194, 154);
+            this.OpenFormGroupes.Location = new System.Drawing.Point(1139, 154);
             this.OpenFormGroupes.Name = "OpenFormGroupes";
             this.OpenFormGroupes.Size = new System.Drawing.Size(20, 21);
             this.OpenFormGroupes.TabIndex = 34;
@@ -269,7 +269,7 @@
             this.DateNaissance.CustomFormat = "dd-MM-yyyy";
             this.DateNaissance.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateNaissance.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DateNaissance.Location = new System.Drawing.Point(918, 216);
+            this.DateNaissance.Location = new System.Drawing.Point(863, 216);
             this.DateNaissance.Name = "DateNaissance";
             this.DateNaissance.Size = new System.Drawing.Size(273, 32);
             this.DateNaissance.TabIndex = 11;
@@ -283,7 +283,7 @@
             this.OpenFormSecteur.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.OpenFormSecteur.FlatAppearance.BorderSize = 0;
             this.OpenFormSecteur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OpenFormSecteur.Location = new System.Drawing.Point(1194, 87);
+            this.OpenFormSecteur.Location = new System.Drawing.Point(1139, 87);
             this.OpenFormSecteur.Name = "OpenFormSecteur";
             this.OpenFormSecteur.Size = new System.Drawing.Size(20, 21);
             this.OpenFormSecteur.TabIndex = 34;
@@ -295,7 +295,7 @@
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(766, 224);
+            this.label8.Location = new System.Drawing.Point(711, 224);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(146, 21);
             this.label8.TabIndex = 7;
@@ -306,7 +306,7 @@
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(841, 190);
+            this.label7.Location = new System.Drawing.Point(786, 190);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 21);
             this.label7.TabIndex = 7;
@@ -317,7 +317,7 @@
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(831, 156);
+            this.label10.Location = new System.Drawing.Point(776, 156);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(81, 21);
             this.label10.TabIndex = 32;
@@ -358,7 +358,7 @@
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(843, 121);
+            this.label11.Location = new System.Drawing.Point(788, 121);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(69, 21);
             this.label11.TabIndex = 32;
@@ -387,7 +387,7 @@
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(829, 87);
+            this.label12.Location = new System.Drawing.Point(774, 87);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(83, 21);
             this.label12.TabIndex = 7;
@@ -467,13 +467,13 @@
             this.StagaireDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.StagaireDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.StagaireDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.StagaireDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.StagaireDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.StagaireDGV.ColumnHeadersHeight = 36;
             this.StagaireDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codestagiaireDataGridViewTextBoxColumn,
@@ -488,14 +488,14 @@
             this.nomGroupeDataGridViewTextBoxColumn,
             this.photoDataGridViewImageColumn});
             this.StagaireDGV.DataSource = this.getStagaireBindingSource1;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.StagaireDGV.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.StagaireDGV.DefaultCellStyle = dataGridViewCellStyle2;
             this.StagaireDGV.EnableHeadersVisualStyles = false;
             this.StagaireDGV.GridColor = System.Drawing.SystemColors.ActiveBorder;
             this.StagaireDGV.Location = new System.Drawing.Point(23, 481);
@@ -506,42 +506,6 @@
             this.StagaireDGV.Size = new System.Drawing.Size(1253, 385);
             this.StagaireDGV.TabIndex = 27;
             this.StagaireDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StagaireDGV_CellClick);
-            // 
-            // getStagaireBindingSource1
-            // 
-            this.getStagaireBindingSource1.DataMember = "GetStagaire";
-            this.getStagaireBindingSource1.DataSource = this.getStagaire;
-            // 
-            // getStagaire
-            // 
-            this.getStagaire.DataSetName = "GetStagaire";
-            this.getStagaire.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // button5
-            // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.BackColor = System.Drawing.Color.LimeGreen;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Transparent;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(1161, 872);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(106, 35);
-            this.button5.TabIndex = 29;
-            this.button5.Text = "Supprimer";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // getStagaireBindingSource
-            // 
-            this.getStagaireBindingSource.DataSource = this.getStagaire;
-            this.getStagaireBindingSource.Position = 0;
-            // 
-            // getStagaireTableAdapter
-            // 
-            this.getStagaireTableAdapter.ClearBeforeFill = true;
             // 
             // codestagiaireDataGridViewTextBoxColumn
             // 
@@ -622,6 +586,42 @@
             this.photoDataGridViewImageColumn.Name = "photoDataGridViewImageColumn";
             this.photoDataGridViewImageColumn.ReadOnly = true;
             this.photoDataGridViewImageColumn.Visible = false;
+            // 
+            // getStagaireBindingSource1
+            // 
+            this.getStagaireBindingSource1.DataMember = "GetStagaire";
+            this.getStagaireBindingSource1.DataSource = this.getStagaire;
+            // 
+            // getStagaire
+            // 
+            this.getStagaire.DataSetName = "GetStagaire";
+            this.getStagaire.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.BackColor = System.Drawing.Color.LimeGreen;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.Transparent;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(1161, 872);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(106, 35);
+            this.button5.TabIndex = 29;
+            this.button5.Text = "Supprimer";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // getStagaireBindingSource
+            // 
+            this.getStagaireBindingSource.DataSource = this.getStagaire;
+            this.getStagaireBindingSource.Position = 0;
+            // 
+            // getStagaireTableAdapter
+            // 
+            this.getStagaireTableAdapter.ClearBeforeFill = true;
             // 
             // Form_inscription
             // 
