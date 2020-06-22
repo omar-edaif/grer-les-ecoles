@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -115,14 +116,16 @@ namespace projet_de_fin_formation.Forms
         #endregion
 
         private void BtnModifierinfo_Click(object sender, EventArgs e)
-        {
+        {           
             panelUtilisatuerInformation.Visible = true;
-
         }
 
         private void buttonChangerMoteDePass_Click(object sender, EventArgs e)
         {
-            panelUtilisatuerInformation.Visible = false;
+            if (MessageBox.Show($"Voulez vous modifier votre mote de passe", "Questien", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                UserServices.UpdateUser(CurrentUser.Id, CurrentUser.Username, UserServices.ComputePasswordHash(textBoxMoteDePass.Text), CurrentUser.IdRole);
+            }
         }
 
         private void buttonDeconnecter_Click(object sender, EventArgs e)
@@ -166,6 +169,34 @@ namespace projet_de_fin_formation.Forms
         {
             Add_NewUser user = new Add_NewUser();
             user.ShowDialog();
+        }
+
+        private void TxtNomUtilisateur_Validating(object sender, CancelEventArgs e)
+        {
+            if (!Regex.IsMatch((sender as TextBox).Text, @"^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{6,15}$"))
+            {
+                errorProvider1.SetError((sender as TextBox), "Le mot de passe doit comporter au moins 6 caractères, mais pas plus de 15 \nau moins(une lettre majuscule, un chiffre, une minuscule)");
+                e.Cancel = true;
+            }
+            if (string.IsNullOrWhiteSpace((sender as TextBox).Text) || string.IsNullOrEmpty((sender as TextBox).Text))
+            {
+                errorProvider1.SetError((sender as TextBox), "Invalide mote de passe");
+                e.Cancel = true;
+            }
+        }
+
+        private void textBoxMoteDePass_Validating(object sender, CancelEventArgs e)
+        {
+            if (!string.Equals((sender as TextBox).Text,  TxtNomUtilisateur.Text))
+            {
+                errorProvider1.SetError((sender as TextBox), "Les mots de passe ne sont pas identiques");
+                e.Cancel = true;
+            }
+        }
+
+        private void TxtNomUtilisateur_Validated(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
         }
     }
 }

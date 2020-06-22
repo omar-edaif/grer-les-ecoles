@@ -77,6 +77,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>APP_EcoleDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="APP_EcoleDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>APP_EcoleDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Classes\UserServices.cs" />
     <Compile Include="Forms\Add_AnneeScolaire.cs">
       <SubType>Form</SubType>
@@ -292,6 +297,17 @@
     </None>
     <None Include="APP_EcoleDataSet2.xss">
       <DependentUpon>APP_EcoleDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="APP_EcoleDataSet4.xsc">
+      <DependentUpon>APP_EcoleDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="APP_EcoleDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>APP_EcoleDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="APP_EcoleDataSet4.xss">
+      <DependentUpon>APP_EcoleDataSet4.xsd</DependentUpon>
     </None>
     <None Include="GestionModule.xsc">
       <DependentUpon>GestionModule.xsd</DependentUpon>

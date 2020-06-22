@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Menu));
             this.flowLayoutPanelMenuIcon = new System.Windows.Forms.FlowLayoutPanel();
             this.panelGestionUtilisateurs = new System.Windows.Forms.Panel();
@@ -75,6 +76,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblUserName = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.flowLayoutPanelMenuIcon.SuspendLayout();
             this.panelGestionUtilisateurs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -99,6 +101,7 @@
             this.panel2.SuspendLayout();
             this.panelUtilisatuerInformation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanelMenuIcon
@@ -119,7 +122,7 @@
             this.flowLayoutPanelMenuIcon.Location = new System.Drawing.Point(13, 208);
             this.flowLayoutPanelMenuIcon.Name = "flowLayoutPanelMenuIcon";
             this.flowLayoutPanelMenuIcon.Size = new System.Drawing.Size(1033, 501);
-            this.flowLayoutPanelMenuIcon.TabIndex = 0;
+            this.flowLayoutPanelMenuIcon.TabIndex = 1;
             // 
             // panelGestionUtilisateurs
             // 
@@ -129,7 +132,7 @@
             this.panelGestionUtilisateurs.Margin = new System.Windows.Forms.Padding(8);
             this.panelGestionUtilisateurs.Name = "panelGestionUtilisateurs";
             this.panelGestionUtilisateurs.Size = new System.Drawing.Size(185, 225);
-            this.panelGestionUtilisateurs.TabIndex = 5;
+            this.panelGestionUtilisateurs.TabIndex = 0;
             this.panelGestionUtilisateurs.Visible = false;
             // 
             // label8
@@ -170,7 +173,7 @@
             this.panelGestionEnseignants.Margin = new System.Windows.Forms.Padding(8);
             this.panelGestionEnseignants.Name = "panelGestionEnseignants";
             this.panelGestionEnseignants.Size = new System.Drawing.Size(185, 225);
-            this.panelGestionEnseignants.TabIndex = 2;
+            this.panelGestionEnseignants.TabIndex = 1;
             this.panelGestionEnseignants.Visible = false;
             // 
             // pictureBoxGestionEnseignants
@@ -211,7 +214,7 @@
             this.panelGestionStagaires.Margin = new System.Windows.Forms.Padding(8);
             this.panelGestionStagaires.Name = "panelGestionStagaires";
             this.panelGestionStagaires.Size = new System.Drawing.Size(185, 225);
-            this.panelGestionStagaires.TabIndex = 0;
+            this.panelGestionStagaires.TabIndex = 2;
             this.panelGestionStagaires.Visible = false;
             // 
             // lblGestienStagaire
@@ -251,7 +254,7 @@
             this.panelGestionModules.Margin = new System.Windows.Forms.Padding(8);
             this.panelGestionModules.Name = "panelGestionModules";
             this.panelGestionModules.Size = new System.Drawing.Size(185, 225);
-            this.panelGestionModules.TabIndex = 2;
+            this.panelGestionModules.TabIndex = 3;
             this.panelGestionModules.Visible = false;
             // 
             // label1
@@ -291,7 +294,7 @@
             this.panelGestionGroupes.Margin = new System.Windows.Forms.Padding(8);
             this.panelGestionGroupes.Name = "panelGestionGroupes";
             this.panelGestionGroupes.Size = new System.Drawing.Size(185, 225);
-            this.panelGestionGroupes.TabIndex = 2;
+            this.panelGestionGroupes.TabIndex = 4;
             this.panelGestionGroupes.Visible = false;
             // 
             // label2
@@ -331,7 +334,7 @@
             this.panelGestionFilières.Margin = new System.Windows.Forms.Padding(8);
             this.panelGestionFilières.Name = "panelGestionFilières";
             this.panelGestionFilières.Size = new System.Drawing.Size(185, 225);
-            this.panelGestionFilières.TabIndex = 2;
+            this.panelGestionFilières.TabIndex = 5;
             this.panelGestionFilières.Visible = false;
             // 
             // label4
@@ -371,7 +374,7 @@
             this.panelGestionNiveau.Margin = new System.Windows.Forms.Padding(8);
             this.panelGestionNiveau.Name = "panelGestionNiveau";
             this.panelGestionNiveau.Size = new System.Drawing.Size(185, 225);
-            this.panelGestionNiveau.TabIndex = 2;
+            this.panelGestionNiveau.TabIndex = 6;
             this.panelGestionNiveau.Visible = false;
             // 
             // label3
@@ -411,7 +414,7 @@
             this.panelGestionDiplôme.Margin = new System.Windows.Forms.Padding(8);
             this.panelGestionDiplôme.Name = "panelGestionDiplôme";
             this.panelGestionDiplôme.Size = new System.Drawing.Size(185, 225);
-            this.panelGestionDiplôme.TabIndex = 3;
+            this.panelGestionDiplôme.TabIndex = 7;
             this.panelGestionDiplôme.Visible = false;
             // 
             // label6
@@ -451,7 +454,7 @@
             this.panelGestionExamens.Margin = new System.Windows.Forms.Padding(8);
             this.panelGestionExamens.Name = "panelGestionExamens";
             this.panelGestionExamens.Size = new System.Drawing.Size(185, 225);
-            this.panelGestionExamens.TabIndex = 2;
+            this.panelGestionExamens.TabIndex = 8;
             this.panelGestionExamens.Visible = false;
             // 
             // label5
@@ -491,7 +494,7 @@
             this.panelGestionSecteurs.Margin = new System.Windows.Forms.Padding(8);
             this.panelGestionSecteurs.Name = "panelGestionSecteurs";
             this.panelGestionSecteurs.Size = new System.Drawing.Size(185, 225);
-            this.panelGestionSecteurs.TabIndex = 4;
+            this.panelGestionSecteurs.TabIndex = 9;
             this.panelGestionSecteurs.Visible = false;
             // 
             // label7
@@ -542,7 +545,7 @@
             this.panel2.Location = new System.Drawing.Point(13, 73);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1033, 116);
-            this.panel2.TabIndex = 7;
+            this.panel2.TabIndex = 0;
             // 
             // panelUtilisatuerInformation
             // 
@@ -553,10 +556,10 @@
             this.panelUtilisatuerInformation.Controls.Add(this.label12);
             this.panelUtilisatuerInformation.Controls.Add(this.TxtNomUtilisateur);
             this.panelUtilisatuerInformation.Controls.Add(this.label11);
-            this.panelUtilisatuerInformation.Location = new System.Drawing.Point(451, 3);
+            this.panelUtilisatuerInformation.Location = new System.Drawing.Point(441, 3);
             this.panelUtilisatuerInformation.Name = "panelUtilisatuerInformation";
-            this.panelUtilisatuerInformation.Size = new System.Drawing.Size(579, 110);
-            this.panelUtilisatuerInformation.TabIndex = 5;
+            this.panelUtilisatuerInformation.Size = new System.Drawing.Size(589, 110);
+            this.panelUtilisatuerInformation.TabIndex = 1;
             this.panelUtilisatuerInformation.Visible = false;
             // 
             // button1
@@ -564,7 +567,7 @@
             this.button1.BackColor = System.Drawing.Color.Silver;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(554, 0);
+            this.button1.Location = new System.Drawing.Point(564, 0);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(23, 22);
@@ -580,7 +583,7 @@
             this.buttonChangerMoteDePass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonChangerMoteDePass.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonChangerMoteDePass.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonChangerMoteDePass.Location = new System.Drawing.Point(495, 71);
+            this.buttonChangerMoteDePass.Location = new System.Drawing.Point(502, 72);
             this.buttonChangerMoteDePass.Name = "buttonChangerMoteDePass";
             this.buttonChangerMoteDePass.Size = new System.Drawing.Size(72, 32);
             this.buttonChangerMoteDePass.TabIndex = 18;
@@ -591,39 +594,43 @@
             // textBoxMoteDePass
             // 
             this.textBoxMoteDePass.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.textBoxMoteDePass.Location = new System.Drawing.Point(201, 46);
+            this.textBoxMoteDePass.Location = new System.Drawing.Point(243, 50);
             this.textBoxMoteDePass.Name = "textBoxMoteDePass";
             this.textBoxMoteDePass.PasswordChar = '*';
             this.textBoxMoteDePass.Size = new System.Drawing.Size(249, 28);
             this.textBoxMoteDePass.TabIndex = 17;
+            this.textBoxMoteDePass.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxMoteDePass_Validating);
+            this.textBoxMoteDePass.Validated += new System.EventHandler(this.TxtNomUtilisateur_Validated);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(62, 49);
+            this.label12.Location = new System.Drawing.Point(2, 53);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(133, 21);
+            this.label12.Size = new System.Drawing.Size(224, 21);
             this.label12.TabIndex = 16;
-            this.label12.Text = "Mote de pass :";
+            this.label12.Text = "Confirmez mote de pass :";
             // 
             // TxtNomUtilisateur
             // 
             this.TxtNomUtilisateur.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.TxtNomUtilisateur.Location = new System.Drawing.Point(201, 12);
+            this.TxtNomUtilisateur.Location = new System.Drawing.Point(243, 12);
             this.TxtNomUtilisateur.Name = "TxtNomUtilisateur";
             this.TxtNomUtilisateur.Size = new System.Drawing.Size(249, 28);
             this.TxtNomUtilisateur.TabIndex = 17;
+            this.TxtNomUtilisateur.Validating += new System.ComponentModel.CancelEventHandler(this.TxtNomUtilisateur_Validating);
+            this.TxtNomUtilisateur.Validated += new System.EventHandler(this.TxtNomUtilisateur_Validated);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(31, 15);
+            this.label11.Location = new System.Drawing.Point(93, 15);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(164, 21);
+            this.label11.Size = new System.Drawing.Size(133, 21);
             this.label11.TabIndex = 16;
-            this.label11.Text = "Nom d\'utilisateur :";
+            this.label11.Text = "Mote de pass :";
             // 
             // buttonDeconnecter
             // 
@@ -635,7 +642,7 @@
             this.buttonDeconnecter.Location = new System.Drawing.Point(336, 76);
             this.buttonDeconnecter.Name = "buttonDeconnecter";
             this.buttonDeconnecter.Size = new System.Drawing.Size(99, 29);
-            this.buttonDeconnecter.TabIndex = 4;
+            this.buttonDeconnecter.TabIndex = 1;
             this.buttonDeconnecter.Text = "Déconnecté";
             this.buttonDeconnecter.UseVisualStyleBackColor = false;
             this.buttonDeconnecter.Click += new System.EventHandler(this.buttonDeconnecter_Click);
@@ -650,7 +657,7 @@
             this.BtnModifierinfo.Location = new System.Drawing.Point(228, 76);
             this.BtnModifierinfo.Name = "BtnModifierinfo";
             this.BtnModifierinfo.Size = new System.Drawing.Size(102, 29);
-            this.BtnModifierinfo.TabIndex = 3;
+            this.BtnModifierinfo.TabIndex = 0;
             this.BtnModifierinfo.Text = "Modifier info";
             this.BtnModifierinfo.UseVisualStyleBackColor = false;
             this.BtnModifierinfo.Click += new System.EventHandler(this.BtnModifierinfo_Click);
@@ -688,10 +695,14 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Green;
-            this.panel3.Location = new System.Drawing.Point(-1, 715);
+            this.panel3.Location = new System.Drawing.Point(-1, 717);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1058, 10);
             this.panel3.TabIndex = 7;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // Form_Menu
             // 
@@ -748,6 +759,7 @@
             this.panelUtilisatuerInformation.ResumeLayout(false);
             this.panelUtilisatuerInformation.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -800,5 +812,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

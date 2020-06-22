@@ -37,6 +37,10 @@
             this.ComboFiliere = new System.Windows.Forms.ComboBox();
             this.ComboSecteur = new System.Windows.Forms.ComboBox();
             this.Sauvgard = new System.Windows.Forms.Button();
+            this.OpenFormModule = new System.Windows.Forms.Button();
+            this.OpenFormFiliere = new System.Windows.Forms.Button();
+            this.OpenFormGroupe = new System.Windows.Forms.Button();
+            this.OpenFormSecteur = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,14 +54,12 @@
             this.getExamsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.getExams = new projet_de_fin_formation.GetExams();
             this.getExamsTableAdapter = new projet_de_fin_formation.GetExamsTableAdapters.GetExamsTableAdapter();
-            this.OpenFormModule = new System.Windows.Forms.Button();
-            this.OpenFormFiliere = new System.Windows.Forms.Button();
-            this.OpenFormGroupe = new System.Windows.Forms.Button();
-            this.OpenFormSecteur = new System.Windows.Forms.Button();
+            this.ep = new System.Windows.Forms.ErrorProvider(this.components);
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExamDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getExamsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getExams)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ep)).BeginInit();
             this.SuspendLayout();
             // 
             // metroPanel1
@@ -144,6 +146,70 @@
             this.Sauvgard.UseVisualStyleBackColor = false;
             this.Sauvgard.Click += new System.EventHandler(this.Sauvgard_Click);
             // 
+            // OpenFormModule
+            // 
+            this.OpenFormModule.BackColor = System.Drawing.Color.Transparent;
+            this.OpenFormModule.BackgroundImage = global::projet_de_fin_formation.Properties.Resources.add_button_inside_black_circle__1_;
+            this.OpenFormModule.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.OpenFormModule.FlatAppearance.BorderSize = 0;
+            this.OpenFormModule.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.OpenFormModule.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.OpenFormModule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OpenFormModule.Location = new System.Drawing.Point(1084, 91);
+            this.OpenFormModule.Name = "OpenFormModule";
+            this.OpenFormModule.Size = new System.Drawing.Size(22, 25);
+            this.OpenFormModule.TabIndex = 65;
+            this.OpenFormModule.UseVisualStyleBackColor = false;
+            this.OpenFormModule.Click += new System.EventHandler(this.OpenFormModule_Click);
+            // 
+            // OpenFormFiliere
+            // 
+            this.OpenFormFiliere.BackColor = System.Drawing.Color.Transparent;
+            this.OpenFormFiliere.BackgroundImage = global::projet_de_fin_formation.Properties.Resources.add_button_inside_black_circle__1_;
+            this.OpenFormFiliere.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.OpenFormFiliere.FlatAppearance.BorderSize = 0;
+            this.OpenFormFiliere.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.OpenFormFiliere.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.OpenFormFiliere.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OpenFormFiliere.Location = new System.Drawing.Point(1084, 55);
+            this.OpenFormFiliere.Name = "OpenFormFiliere";
+            this.OpenFormFiliere.Size = new System.Drawing.Size(22, 25);
+            this.OpenFormFiliere.TabIndex = 65;
+            this.OpenFormFiliere.UseVisualStyleBackColor = false;
+            this.OpenFormFiliere.Click += new System.EventHandler(this.OpenFormFiliere_Click);
+            // 
+            // OpenFormGroupe
+            // 
+            this.OpenFormGroupe.BackColor = System.Drawing.Color.Transparent;
+            this.OpenFormGroupe.BackgroundImage = global::projet_de_fin_formation.Properties.Resources.add_button_inside_black_circle__1_;
+            this.OpenFormGroupe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.OpenFormGroupe.FlatAppearance.BorderSize = 0;
+            this.OpenFormGroupe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.OpenFormGroupe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.OpenFormGroupe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OpenFormGroupe.Location = new System.Drawing.Point(480, 91);
+            this.OpenFormGroupe.Name = "OpenFormGroupe";
+            this.OpenFormGroupe.Size = new System.Drawing.Size(22, 25);
+            this.OpenFormGroupe.TabIndex = 65;
+            this.OpenFormGroupe.UseVisualStyleBackColor = false;
+            this.OpenFormGroupe.Click += new System.EventHandler(this.OpenFormGroupe_Click);
+            // 
+            // OpenFormSecteur
+            // 
+            this.OpenFormSecteur.BackColor = System.Drawing.Color.Transparent;
+            this.OpenFormSecteur.BackgroundImage = global::projet_de_fin_formation.Properties.Resources.add_button_inside_black_circle__1_;
+            this.OpenFormSecteur.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.OpenFormSecteur.FlatAppearance.BorderSize = 0;
+            this.OpenFormSecteur.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.OpenFormSecteur.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.OpenFormSecteur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OpenFormSecteur.Location = new System.Drawing.Point(480, 51);
+            this.OpenFormSecteur.Name = "OpenFormSecteur";
+            this.OpenFormSecteur.Size = new System.Drawing.Size(22, 27);
+            this.OpenFormSecteur.TabIndex = 65;
+            this.OpenFormSecteur.UseVisualStyleBackColor = false;
+            this.OpenFormSecteur.Click += new System.EventHandler(this.OpenFormSecteur_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -220,13 +286,14 @@
             this.ExamDGV.DefaultCellStyle = dataGridViewCellStyle2;
             this.ExamDGV.EnableHeadersVisualStyles = false;
             this.ExamDGV.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ExamDGV.Location = new System.Drawing.Point(204, 150);
+            this.ExamDGV.Location = new System.Drawing.Point(204, 123);
             this.ExamDGV.Name = "ExamDGV";
             this.ExamDGV.RowHeadersVisible = false;
-            this.ExamDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ExamDGV.Size = new System.Drawing.Size(874, 414);
+            this.ExamDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.ExamDGV.Size = new System.Drawing.Size(874, 441);
             this.ExamDGV.TabIndex = 68;
-            this.ExamDGV.CellLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.ExamDGV_CellLeave);
+            this.ExamDGV.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.ExamDGV_CellValidating_1);
+            this.ExamDGV.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.ExamDGV_EditingControlShowing);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -276,69 +343,9 @@
             // 
             this.getExamsTableAdapter.ClearBeforeFill = true;
             // 
-            // OpenFormModule
+            // ep
             // 
-            this.OpenFormModule.BackColor = System.Drawing.Color.Transparent;
-            this.OpenFormModule.BackgroundImage = global::projet_de_fin_formation.Properties.Resources.add_button_inside_black_circle__1_;
-            this.OpenFormModule.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.OpenFormModule.FlatAppearance.BorderSize = 0;
-            this.OpenFormModule.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.OpenFormModule.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.OpenFormModule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OpenFormModule.Location = new System.Drawing.Point(1084, 91);
-            this.OpenFormModule.Name = "OpenFormModule";
-            this.OpenFormModule.Size = new System.Drawing.Size(22, 25);
-            this.OpenFormModule.TabIndex = 65;
-            this.OpenFormModule.UseVisualStyleBackColor = false;
-            this.OpenFormModule.Click += new System.EventHandler(this.OpenFormModule_Click);
-            // 
-            // OpenFormFiliere
-            // 
-            this.OpenFormFiliere.BackColor = System.Drawing.Color.Transparent;
-            this.OpenFormFiliere.BackgroundImage = global::projet_de_fin_formation.Properties.Resources.add_button_inside_black_circle__1_;
-            this.OpenFormFiliere.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.OpenFormFiliere.FlatAppearance.BorderSize = 0;
-            this.OpenFormFiliere.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.OpenFormFiliere.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.OpenFormFiliere.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OpenFormFiliere.Location = new System.Drawing.Point(1084, 55);
-            this.OpenFormFiliere.Name = "OpenFormFiliere";
-            this.OpenFormFiliere.Size = new System.Drawing.Size(22, 25);
-            this.OpenFormFiliere.TabIndex = 65;
-            this.OpenFormFiliere.UseVisualStyleBackColor = false;
-            this.OpenFormFiliere.Click += new System.EventHandler(this.OpenFormFiliere_Click);
-            // 
-            // OpenFormGroupe
-            // 
-            this.OpenFormGroupe.BackColor = System.Drawing.Color.Transparent;
-            this.OpenFormGroupe.BackgroundImage = global::projet_de_fin_formation.Properties.Resources.add_button_inside_black_circle__1_;
-            this.OpenFormGroupe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.OpenFormGroupe.FlatAppearance.BorderSize = 0;
-            this.OpenFormGroupe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.OpenFormGroupe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.OpenFormGroupe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OpenFormGroupe.Location = new System.Drawing.Point(480, 91);
-            this.OpenFormGroupe.Name = "OpenFormGroupe";
-            this.OpenFormGroupe.Size = new System.Drawing.Size(22, 25);
-            this.OpenFormGroupe.TabIndex = 65;
-            this.OpenFormGroupe.UseVisualStyleBackColor = false;
-            this.OpenFormGroupe.Click += new System.EventHandler(this.OpenFormGroupe_Click);
-            // 
-            // OpenFormSecteur
-            // 
-            this.OpenFormSecteur.BackColor = System.Drawing.Color.Transparent;
-            this.OpenFormSecteur.BackgroundImage = global::projet_de_fin_formation.Properties.Resources.add_button_inside_black_circle__1_;
-            this.OpenFormSecteur.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.OpenFormSecteur.FlatAppearance.BorderSize = 0;
-            this.OpenFormSecteur.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.OpenFormSecteur.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.OpenFormSecteur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OpenFormSecteur.Location = new System.Drawing.Point(480, 51);
-            this.OpenFormSecteur.Name = "OpenFormSecteur";
-            this.OpenFormSecteur.Size = new System.Drawing.Size(22, 27);
-            this.OpenFormSecteur.TabIndex = 65;
-            this.OpenFormSecteur.UseVisualStyleBackColor = false;
-            this.OpenFormSecteur.Click += new System.EventHandler(this.OpenFormSecteur_Click);
+            this.ep.ContainerControl = this;
             // 
             // Form_Exam
             // 
@@ -356,6 +363,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ExamDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getExamsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getExams)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ep)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -388,5 +396,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn intitulémodDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Note;
+        private System.Windows.Forms.ErrorProvider ep;
     }
 }

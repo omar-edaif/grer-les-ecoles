@@ -66,7 +66,58 @@ namespace projet_de_fin_formation
                 throw;              
             }
         }
+        public static User GetUserById(int idUser)
+        {           
+            using (SqlConnection Cnx = new SqlConnection(ADO.connectionString))
+            {
+                SqlCommand command = new SqlCommand("SELECT LoginUser,mot_de_passe,IdRole FROM compteUser WHERE code_User = @id;", Cnx);
+                command.Parameters.Add(new SqlParameter("id",idUser));
+                Cnx.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                   return new User(idUser, reader.GetString(0), reader.GetString(1), reader.GetInt32(2));
+                }
+            }
+            return new User();  
+        }
+        public static bool AddUser(string username, string password, int idRole)
+        {
+            using (SqlConnection Cnx = new SqlConnection(ADO.connectionString))
+            {
+                SqlCommand command = new SqlCommand("INSERT INTO compteUser VALUES(@login,@password,@idrole);", Cnx);
+                command.Parameters.Add(new SqlParameter("login", username));
+                command.Parameters.Add(new SqlParameter("password",UserServices.ComputePasswordHash(password)));
+                command.Parameters.Add(new SqlParameter("idrole", idRole));
+                Cnx.Open();
+                return command.ExecuteNonQuery() >= 1;
+            }            
+        }
+        public static bool DeleteUser(int idUser)
+        {
+            using (SqlConnection Cnx = new SqlConnection(ADO.connectionString))
+            {
+                SqlCommand command = new SqlCommand("DELETE FROM compteUser WHERE code_User = @idUser;", Cnx);
+                command.Parameters.Add(new SqlParameter("idUser", idUser));
+                Cnx.Open();
+                return command.ExecuteNonQuery() >= 1;
+            }
+        }
+        public static void UpdateUser(int idUser, string username, string password, int idRole)
+        {
+            using (SqlConnection Cnx = new SqlConnection(ADO.connectionString))
+            {
+                SqlCommand command = new SqlCommand("UPDATE compteUser SET LoginUser = @login,mot_de_passe = @password,IdRole = @idrole WHERE code_User = @idUser;", Cnx);
+                command.Parameters.Add(new SqlParameter("idUser", idUser));
+                command.Parameters.Add(new SqlParameter("login", username));
+                command.Parameters.Add(new SqlParameter("password", UserServices.ComputePasswordHash(password)));
+                command.Parameters.Add(new SqlParameter("idrole", idRole));
+                Cnx.Open();
+                command.ExecuteNonQuery();
+            }
 
 
+        }
     }
 }

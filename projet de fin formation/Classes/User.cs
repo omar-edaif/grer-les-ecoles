@@ -12,14 +12,17 @@ namespace projet_de_fin_formation
         {
 
         }
-        //public User(int id, string name,Role role)
-        //{
-        //    Id = id;
-        //    Username = name;
-        //    Role = role;
-        //}
+        public User(int id, string name, string password,int idrole)
+        {
+            Id = id;
+            Username = name;
+            Password = password;
+            IdRole = idrole;
+        }
         public int Id { get; set; }
         public string Username { get; set; }
+        public string Password { get; private set;}
+
         public int IdRole { get; set; }
         public string Role { get; set; }
         public List<string> Permissions { get; set; }
