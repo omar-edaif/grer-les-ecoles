@@ -41,7 +41,7 @@ namespace projet_de_fin_formation.Forms
         {
             if (ValidateChildren(ValidationConstraints.Visible))
             {
-                UserServices.AddUser(TxtName.Text, textPassword.Text, (int)ComboBoxRole.SelectedValue).ToString();
+                UserServices.AddUser(TxtName.Text, textPassword.Text, (int)ComboBoxRole.SelectedValue);
                 this.userRolesTableAdapter.Fill(aPP_EcoleDataSet4.UserRoles);
                 ClearInputFields();
             }
@@ -50,7 +50,7 @@ namespace projet_de_fin_formation.Forms
 
         private void BtnModifier_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show($"Voulez vous modifier l'utilisateur suivant: \n\t-{TxtName.Text}","Questien", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show($"Voulez vous modifier l'utilisateur suivant: \n\t \" {TxtName.Text} \"","Questien", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 UserServices.UpdateUser(int.Parse(txtcode_user.Text), TxtName.Text, textPassword.Text, (int)ComboBoxRole.SelectedValue);
                 this.userRolesTableAdapter.Fill(aPP_EcoleDataSet4.UserRoles);
@@ -61,7 +61,7 @@ namespace projet_de_fin_formation.Forms
 
         private void btnSupprimer_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show($"Voulez vous supprimer l'utilisateur suivant: \n\t-{TxtName.Text}", "Questien", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show($"Voulez vous supprimer l'utilisateur suivant: \n\t \" {TxtName.Text} \"", "Questien", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (UserServices.DeleteUser(int.Parse(txtcode_user.Text)))
                 {
@@ -76,7 +76,7 @@ namespace projet_de_fin_formation.Forms
         {
             if (e.ColumnIndex == 2 )
             {
-                e.Value = new string('\u25CF', 12);
+                e.Value = new string('\u25CF', e.Value.ToString().Length);
             }
         }
 
@@ -93,15 +93,14 @@ namespace projet_de_fin_formation.Forms
 
         private void TxtName_Validating(object sender, CancelEventArgs e)
         {
-           if( aPP_EcoleDataSet4.UserRoles.AsEnumerable().Select(al => al.Field<String>("LoginUser")).ToList<string>().Contains((sender as TextBox).Text))
+           if( aPP_EcoleDataSet4.UserRoles.AsEnumerable().Select(al => al.Field<String>("LoginUser")).Contains((sender as TextBox).Text))
             {
                 errorProvider1.SetError((sender as TextBox), "Ce nom d'utilisateur existe déjà");
-                errorProvider1.BlinkStyle = ErrorBlinkStyle.AlwaysBlink;
                 e.Cancel = true;
             }
             if (string.IsNullOrWhiteSpace((sender as TextBox).Text)|| string.IsNullOrEmpty((sender as TextBox).Text))
             {
-                errorProvider1.SetError((sender as TextBox), "Invalide Nom d'utilisateur");
+                errorProvider1.SetError((sender as TextBox), "Invalide Nome d'utilisateur");
                 errorProvider1.BlinkStyle = ErrorBlinkStyle.AlwaysBlink;
                 e.Cancel = true;
             }
@@ -111,7 +110,7 @@ namespace projet_de_fin_formation.Forms
         {
             if (!Regex.IsMatch((sender as TextBox).Text, @"^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{6,15}$"))
             {
-                errorProvider1.SetError((sender as TextBox), "Le mot de passe doit comporter au moins 6 caractères, mais pas plus de 15 \nau moins(une lettre majuscule, un chiffre, une minuscule)");
+                errorProvider1.SetError((sender as TextBox), "Le mot de passe doit comporter au moins 6 caractères,mais pas plus de 15 \nau moins(une lettre majuscule, un chiffre, une minuscule)");
                 e.Cancel = true;                
             }
             if (string.IsNullOrWhiteSpace((sender as TextBox).Text) || string.IsNullOrEmpty((sender as TextBox).Text))

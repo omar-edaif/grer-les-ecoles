@@ -45,7 +45,7 @@ namespace projet_de_fin_formation.Forms
                         }
                         else
                         {
-                            MessageBox.Show("Mot de pass est incorect \n Merci de contacter l'administrateur ", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("Mot de pass est incorect \nMerci de contacter l'administrateur ", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                     else

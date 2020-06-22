@@ -59,14 +59,12 @@ namespace projet_de_fin_formation.Forms
         private void pictureBoxGestionEnseignants_Click(object sender, EventArgs e)
         {
             Form_Enseignant FormEnsgnt = new Form_Enseignant();
-            FormEnsgnt.WindowState = FormWindowState.Maximized;
             FormEnsgnt.ShowDialog();
         }
 
         private void pictureBoxGestionStagaires_Click(object sender, EventArgs e)
         {
             Form_inscription formInscription = new Form_inscription();
-            formInscription.WindowState = FormWindowState.Maximized;
             formInscription.ShowDialog();
 
         }

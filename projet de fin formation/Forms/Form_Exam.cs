@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -120,18 +121,19 @@ namespace projet_de_fin_formation.Forms
 
             foreach (DataGridViewRow row in ExamDGV.Rows)
             {
-                var x = row.Cells[4].Value?.ToString();
-                MessageBox.Show(x);
-                if (string.IsNullOrEmpty(row.Cells[4].Value.ToString()) || int.TryParse((x), out valuecell))
+                if (row.Cells[4].Value == null || row.Cells[4].Value == DBNull.Value || String.IsNullOrWhiteSpace(row.Cells[4].Value.ToString()))
                 {
-                    MessageBox.Show("un note");
-
+                    MessageBox.Show("un note n'est pas valid");
+                    return;
                 }
-                else
-                {
-                    MessageBox.Show("une note est inccorrect or cell empty");
-                }
+            }
 
+            SqlCommand cmd;
+            
+            foreach (DataGridViewRow row in ExamDGV.Rows)
+            {
+                cmd = new SqlCommand($"insert into Examen values({row.Cells[0].Value.ToString()},{ComboModule.SelectedValue.ToString()},getdate(),{row.Cells[4].Value.ToString()})",ADO.Cnx);
+                ADO.Execute(cmd);
             }
         }
         private void OpenFormSecteur_Click(object sender, EventArgs e)
@@ -183,10 +185,14 @@ namespace projet_de_fin_formation.Forms
         {
             if (!this.Validates(e.FormattedValue) && e.ColumnIndex == 4) 
             {
-                e.Cancel = true;
-                ep.SetError(ExamDGV.EditingControl, "Note invalide \"##,##\"");
-                ep.SetIconAlignment(ExamDGV.EditingControl, ErrorIconAlignment.MiddleRight);
-                ep.SetIconPadding(ExamDGV.EditingControl, -20);
+                if (ExamDGV.EditingControl != null)
+                {
+                    e.Cancel = true;
+                    ep.SetError(ExamDGV.EditingControl, "Note invalide \"##,##\"");
+                    ep.SetIconAlignment(ExamDGV.EditingControl, ErrorIconAlignment.MiddleRight);
+                    ep.SetIconPadding(ExamDGV.EditingControl, -20);
+                }
+                
             }
             else
             {

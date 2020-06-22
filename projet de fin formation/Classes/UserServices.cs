@@ -11,7 +11,7 @@ namespace projet_de_fin_formation
 
 {
    public static class UserServices
-    {
+    {//TODO Trim Login
         public static List<string> GetPermissionsForRole(int idRole)
         {
             var listpermission = new List<string>();

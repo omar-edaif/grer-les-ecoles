@@ -138,7 +138,7 @@
             this.Sauvgard.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sauvgard.ForeColor = System.Drawing.Color.Transparent;
             this.Sauvgard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Sauvgard.Location = new System.Drawing.Point(1077, 592);
+            this.Sauvgard.Location = new System.Drawing.Point(1115, 610);
             this.Sauvgard.Name = "Sauvgard";
             this.Sauvgard.Size = new System.Drawing.Size(106, 35);
             this.Sauvgard.TabIndex = 67;
@@ -286,11 +286,11 @@
             this.ExamDGV.DefaultCellStyle = dataGridViewCellStyle2;
             this.ExamDGV.EnableHeadersVisualStyles = false;
             this.ExamDGV.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ExamDGV.Location = new System.Drawing.Point(204, 123);
+            this.ExamDGV.Location = new System.Drawing.Point(121, 132);
             this.ExamDGV.Name = "ExamDGV";
             this.ExamDGV.RowHeadersVisible = false;
-            this.ExamDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.ExamDGV.Size = new System.Drawing.Size(874, 441);
+            this.ExamDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ExamDGV.Size = new System.Drawing.Size(985, 495);
             this.ExamDGV.TabIndex = 68;
             this.ExamDGV.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.ExamDGV_CellValidating_1);
             this.ExamDGV.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.ExamDGV_EditingControlShowing);
