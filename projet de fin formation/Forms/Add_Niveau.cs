@@ -37,6 +37,8 @@ namespace projet_de_fin_formation
             cmd.CommandText = $"insert into niveau values('{txtName.Text.Trim()}','{DateTime.Now.ToShortDateString()}')";
             ADO.Execute(cmd);
             ChargerDGV();
+            ADO.CleanForm(this);
+
         }
         //code modifier les niveaux
 
@@ -47,6 +49,8 @@ namespace projet_de_fin_formation
             ADO.Execute(cmd);
             // Charger DataGridView 
             ChargerDGV();
+            ADO.CleanForm(this);
+
 
         }
         private void btnSupprimer_Click(object sender, EventArgs e)
@@ -57,8 +61,10 @@ namespace projet_de_fin_formation
 
             // Charger DataGridView 
             ChargerDGV();
+            ADO.CleanForm(this);
+
         }
-         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var row = dataGridView1.CurrentRow;
 

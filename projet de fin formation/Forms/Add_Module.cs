@@ -29,7 +29,9 @@ namespace projet_de_fin_formation.Forms
             cmd.CommandText = $"insert into Module values('{TxtModule.Text}')";
             ADO.Execute(cmd);
             this.Close();
-          
+            ADO.CleanForm(this);
+
+
         }
 
         private void Add_Module_Load(object sender, EventArgs e)

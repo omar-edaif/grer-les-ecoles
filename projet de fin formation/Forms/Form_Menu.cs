@@ -124,6 +124,8 @@ namespace projet_de_fin_formation.Forms
             {
                 UserServices.UpdateUser(CurrentUser.Id, CurrentUser.Username, UserServices.ComputePasswordHash(textBoxMoteDePass.Text), CurrentUser.IdRole);
             }
+            ADO.CleanForm(this);
+
         }
 
         private void buttonDeconnecter_Click(object sender, EventArgs e)

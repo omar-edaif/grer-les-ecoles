@@ -64,6 +64,7 @@ namespace projet_de_fin_formation.Forms
 
             // charger DGV
             ChargerDGV();
+            ADO.CleanForm(this);
         }
 
         private void btnSupprimer_Click(object sender, EventArgs e)
@@ -91,6 +92,8 @@ namespace projet_de_fin_formation.Forms
             SqlCommand cmd = new SqlCommand($"update Groupe set Nom_Groupe ='{ TxtName.Text}',Année_scolaire ={ comboAnneeScolair.SelectedValue.ToString()}, Année =' {ComboAnne.Text }',CodeFil ={ comboFiliere.SelectedValue.ToString()} where Code_groupe = {txtcode.Text }");
             ADO.Execute(cmd);
             ChargerDGV();
+            ADO.CleanForm(this);
+
         }
     }
 }

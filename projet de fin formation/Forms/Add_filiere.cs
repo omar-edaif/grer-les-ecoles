@@ -56,6 +56,7 @@ namespace projet_de_fin_formation.Forms
             ADO.Execute(cmd);
 
             ChargerDGV();
+            ADO.CleanForm(this);
         }
 
         private void BtnModifier_Click(object sender, EventArgs e)
@@ -65,6 +66,8 @@ namespace projet_de_fin_formation.Forms
             cmd.CommandText = $" update Filière set nom_Fil='{txtName.Text}',CodeNiveau={ComboNiveau.SelectedValue.ToString()},code_secteur={ComboSecteur.SelectedValue.ToString()} where code_Fil={txtId.Text}";
             ADO.Execute(cmd);
             ChargerDGV();
+            ADO.CleanForm(this);
+
         }
 
         private void btnSupprimer_Click(object sender, EventArgs e)
@@ -73,6 +76,8 @@ namespace projet_de_fin_formation.Forms
             cmd.CommandText = $" delete from Filière where code_Fil={txtId.Text}";
             ADO.Execute(cmd);
             ChargerDGV();
+            ADO.CleanForm(this);
+
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

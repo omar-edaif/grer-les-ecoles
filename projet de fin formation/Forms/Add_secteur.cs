@@ -38,6 +38,8 @@ namespace projet_de_fin_formation.Forms
             cmd.CommandText = $"insert into secteur values('{txtName.Text.Trim()}','{DateTime.Now.ToShortDateString()}')";
             ADO.Execute(cmd);
             ChargerDataGridView();
+            ADO.CleanForm(this);
+
         }
 
         private void BtnModifier_Click(object sender, EventArgs e)
@@ -46,6 +48,8 @@ namespace projet_de_fin_formation.Forms
             cmd.CommandText = $"update Secteur set intitulé_sect ='{txtName.Text.Trim()}'where code_sect={TxtCodeSecteur.Text}";
             ADO.Execute(cmd);
             ChargerDataGridView();
+            ADO.CleanForm(this);
+
         }
 
         private void btnSupprimer_Click(object sender, EventArgs e)

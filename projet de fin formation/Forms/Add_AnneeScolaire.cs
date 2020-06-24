@@ -28,6 +28,7 @@ namespace projet_de_fin_formation.Forms
             SqlCommand cmd = new SqlCommand($"insert into AnneeScolaire values ('{txtAnneScolaire.Text}')");
             ADO.Execute(cmd);
             this.Close();
+            ADO.CleanForm(this);
         }
     }
 }

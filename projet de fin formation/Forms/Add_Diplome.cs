@@ -45,6 +45,7 @@ namespace projet_de_fin_formation.Forms
             SqlCommand cmd = new SqlCommand($"insert into Diplome values('{TxtName.Text}',{combosecteur.SelectedValue.ToString()},{comboNiveau.SelectedValue.ToString()})");
             ADO.Execute(cmd);
             ChargerDGV();
+            ADO.CleanForm(this);
         }
 
         private void BtnModifier_Click(object sender, EventArgs e)
@@ -52,6 +53,7 @@ namespace projet_de_fin_formation.Forms
             SqlCommand cmd = new SqlCommand($"update Diplome set IntituléDiplome='{TxtName.Text}',Code_secteur = {combosecteur.SelectedValue.ToString()},Code_Niveau = {comboNiveau.SelectedValue.ToString()} where Code_Diplome ={txtcode.Text}");
             ADO.Execute(cmd);
             ChargerDGV();
+            ADO.CleanForm(this);
         }
 
         private void btnSupprimer_Click(object sender, EventArgs e)
@@ -59,6 +61,7 @@ namespace projet_de_fin_formation.Forms
             SqlCommand cmd = new SqlCommand($"Delete Diplome where Code_Diplome ={txtcode.Text}");
             ADO.Execute(cmd);
             ChargerDGV();
+            ADO.CleanForm(this);
         }
 
         private void DiplomesDGV_CellClick(object sender, DataGridViewCellEventArgs e)

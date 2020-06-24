@@ -41,11 +41,20 @@ namespace projet_de_fin_formation.Forms
         {
             if (ValidateChildren(ValidationConstraints.Visible))
             {
-                UserServices.AddUser(TxtName.Text, textPassword.Text, (int)ComboBoxRole.SelectedValue);
+                try
+                {
+                UserServices.AddUser(TxtName.Text.Trim(), textPassword.Text, (int)ComboBoxRole.SelectedValue);
                 this.userRolesTableAdapter.Fill(aPP_EcoleDataSet4.UserRoles);
                 ClearInputFields();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message,"ERREUR",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                }
+
             }
-            return;            
+            return;                
         }
 
         private void BtnModifier_Click(object sender, EventArgs e)
@@ -93,7 +102,7 @@ namespace projet_de_fin_formation.Forms
 
         private void TxtName_Validating(object sender, CancelEventArgs e)
         {
-           if( aPP_EcoleDataSet4.UserRoles.AsEnumerable().Select(al => al.Field<String>("LoginUser")).Contains((sender as TextBox).Text))
+           if( aPP_EcoleDataSet4.UserRoles.AsEnumerable().Select(al => al.Field<String>("LoginUser")).Contains((sender as TextBox).Text.Trim()))
             {
                 errorProvider1.SetError((sender as TextBox), "Ce nom d'utilisateur existe déjà");
                 e.Cancel = true;

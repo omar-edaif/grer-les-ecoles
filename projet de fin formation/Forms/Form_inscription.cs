@@ -150,6 +150,8 @@ namespace projet_de_fin_formation.Forms
                     ADO.Execute(InsertStagire);
                     SqlCommand cmd = new SqlCommand($"insert into Inscription values ( (select MAX(code_stagiaire)from Stagiaire),{ComboGroupes.SelectedValue.ToString()},GETDATE())");
                     ADO.Execute(cmd);
+                    ADO.CleanForm(this);
+
                 }
                 else
                 {

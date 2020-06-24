@@ -16,7 +16,7 @@ namespace projet_de_fin_formation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Forms.Form_Exam());
+            Application.Run(new Forms.Add_Diplome());
         }
     }
 }

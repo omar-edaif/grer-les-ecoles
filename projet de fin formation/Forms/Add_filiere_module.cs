@@ -84,6 +84,8 @@ namespace projet_de_fin_formation.Forms
             SqlCommand cmd = new SqlCommand($"insert into ModuleFiliere values({comboModule.SelectedValue.ToString()},{comboFiliere.SelectedValue.ToString()},{TxtMasseHoraire.Text},{TxtCofficient.Text})");
             ADO.Execute(cmd);
             ChargerDGV();
+            ADO.CleanForm(this);
+
 
         }
 

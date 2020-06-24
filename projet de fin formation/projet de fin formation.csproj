@@ -112,6 +112,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GestionModule.xsd</DependentUpon>
     </Compile>
+    <Compile Include="GetEnsgnient.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GetEnsgnient.xsd</DependentUpon>
+    </Compile>
     <Compile Include="GetExams.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -319,6 +324,17 @@
     </None>
     <None Include="GestionModule.xss">
       <DependentUpon>GestionModule.xsd</DependentUpon>
+    </None>
+    <None Include="GetEnsgnient.xsc">
+      <DependentUpon>GetEnsgnient.xsd</DependentUpon>
+    </None>
+    <None Include="GetEnsgnient.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GetEnsgnient.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GetEnsgnient.xss">
+      <DependentUpon>GetEnsgnient.xsd</DependentUpon>
     </None>
     <None Include="GetExams.xsc">
       <DependentUpon>GetExams.xsd</DependentUpon>
